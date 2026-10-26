@@ -83,10 +83,11 @@ export default function HomePage() {
       <section className="relative isolate min-h-[90svh] overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <SmartImage
-            src={unsplash(photo.salonInteriorReal, { w: 2200, q: 85 })}
+            src={photo.salonInteriorReal}
             alt="Vidhi's Salon — Studio Interior & Styling Chairs, Bardoli"
             fill
             priority
+            quality={80}
             sizes="100vw"
             className="object-cover object-[center_35%]"
           />
@@ -167,6 +168,7 @@ export default function HomePage() {
                     alt="Original styling stations at Vidhi's Salon, Bardoli"
                     width={900}
                     height={1150}
+                    sizes="(max-width: 1024px) 60vw, 30vw"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -176,6 +178,7 @@ export default function HomePage() {
                     alt="Signature bridal artistry at Vidhi's Salon, Bardoli"
                     width={600}
                     height={800}
+                    sizes="(max-width: 1024px) 40vw, 20vw"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -348,6 +351,7 @@ export default function HomePage() {
                   alt={img.alt}
                   width={700}
                   height={img.tall ? 950 : 720}
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   loading="lazy"
                   className="h-auto w-full object-cover"
                 />
@@ -472,6 +476,8 @@ export default function HomePage() {
                   alt="Original interior of Vidhi's Salon treatment area, Bardoli"
                   width={1100}
                   height={820}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
               </div>
