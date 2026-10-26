@@ -57,7 +57,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Multi-layered graduation and texturing for voluminous movement, healthy bounce, and effortless styling.",
         priceFrom: 550,
         duration: "60 min",
-        featured: true,
       },
       {
         slug: "signature-blowout-ironing",

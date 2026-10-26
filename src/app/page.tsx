@@ -249,7 +249,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-px overflow-hidden border border-espresso/12 bg-espresso/12 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((s, i) => {
+            {featuredServices.slice(0, 6).map((s, i) => {
               const Icon = serviceIcons[s.category] ?? Sparkles;
               return (
                 <Reveal
