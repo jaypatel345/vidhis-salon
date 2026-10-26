@@ -3,6 +3,7 @@
 import Image, { type ImageProps } from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { site } from "@/data/site";
 
 /**
  * SmartImage wraps next/image and shows an elegant branded fallback
@@ -26,7 +27,7 @@ export function SmartImage({
         role="img"
         aria-label={alt}
       >
-        <span className="font-display text-2xl text-stone/70">Maison Aurélle</span>
+        <span className="font-display text-2xl text-stone/70">{site.name}</span>
       </div>
     );
   }

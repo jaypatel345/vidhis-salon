@@ -1,10 +1,8 @@
 /**
- * FAQ CONTENT — SAMPLE POLICIES (FOR OWNER REVIEW)
+ * VIDHI'S SALON — FAQS & VISITOR INFORMATION
  * ------------------------------------------------------------------
- * The policies below (cancellation windows, deposits, timing, payment
- * methods) are reasonable sample defaults. The salon owner should
- * review and adjust every answer to match real operating policy
- * before launch.
+ * Frequently asked questions for clients visiting Vidhi's Salon on
+ * Lal Bahadur Shastri Road, Bardoli, Gujarat.
  */
 
 export type FAQ = { question: string; answer: string };
@@ -13,81 +11,91 @@ export type FAQGroup = { category: string; items: FAQ[] };
 
 export const faqGroups: FAQGroup[] = [
   {
-    category: "Appointments",
+    category: "Appointments & Location",
     items: [
       {
-        question: "How do I book an appointment?",
+        question: "Where is Vidhi's Salon located in Bardoli?",
         answer:
-          "You can request an appointment through the Book an Appointment page, or call the salon during opening hours. Our online flow is a demonstration that collects your preferences — a team member confirms every request before it becomes a confirmed booking.",
+          "We are located at “Vardan”, directly Opposite Gopal Nagar, on Lal Bahadur Shastri Road, near the Swaminarayan Temple in Jagruti Society / Janta Nagar Society, Bardoli, Gujarat 394601. Landmark: Opposite Gopal Nagar gate.",
       },
       {
-        question: "Are consultations available?",
+        question: "How can I book an appointment?",
         answer:
-          "Yes. We recommend a consultation before any major color change, color correction, or restyle. Consultations are quick, relaxed, and help us plan the right approach — and in the case of correction work, they’re required before we book the service.",
+          "You can request an appointment using our online booking form, send us a WhatsApp message at +91 99251 72388, or call us directly. We recommend advance booking for weekends, festive dates, and bridal services.",
       },
       {
-        question: "How long do appointments take?",
+        question: "Do you accept walk-in clients?",
         answer:
-          "Each service lists an estimated duration on the Services page. Color and highlight work can run longer depending on your hair’s length, density, and starting point — we’ll always give you a realistic estimate when you book.",
+          "Yes, walk-ins are welcome for routine services like threading, waxing, haircuts, and clean-ups depending on chair availability. However, calling ahead at +91 99251 72388 ensures no waiting time.",
       },
       {
-        question: "What if I arrive late?",
+        question: "What are your salon timings?",
         answer:
-          "We hold your slot for up to 15 minutes. Beyond that, we may need to shorten or reschedule your service so we don’t run into the next guest’s time. A courtesy call if you’re running behind is always appreciated. (Sample policy — confirm before launch.)",
+          "We are open Monday through Saturday from 9:30 AM to 7:00 PM. On Sundays, we are open from 10:00 AM to 2:00 PM, and remain available outside regular hours for pre-booked bridal and occasion makeovers.",
       },
     ],
   },
   {
-    category: "Color & Treatments",
+    category: "Hair & Skin Treatments",
     items: [
       {
-        question: "How should I prepare for a color appointment?",
+        question: "Which hair smoothing treatment is best for frizzy hair?",
         answer:
-          "Come with clean, dry, product-free hair unless advised otherwise, and bring reference photos if you have a direction in mind. Avoid washing immediately beforehand only if your stylist has asked you to. If you’ve colored at home recently, let us know — it affects how we plan the service.",
+          "Our Keratin Protein Smoothing and Hair Botox treatments are the most popular choices. Keratin eliminates frizz and provides a straight, silky finish, while Hair Botox focuses on deep internal repair and nourishment. During your consultation, we examine your hair texture and advise the most suitable formula.",
       },
       {
-        question: "Which treatment is right for me?",
+        question: "What skincare products and brands do you use?",
         answer:
-          "It depends on your hair’s condition and history. Deep conditioning restores moisture, bond-repair rebuilds strength after color or heat, and scalp care rebalances the foundation. A short Hair & Scalp Consultation is the best way to choose — we’ll recommend only what your hair actually needs.",
+          "We exclusively use authentic, dermatologist-tested professional brands including L'Oréal Professionnel, Matrix, O3+, Lotus Herbals, Raaga Professional, and Rica Italian Wax for maximum safety and radiant results.",
+      },
+      {
+        question: "How many days before a function should I get a facial?",
+        answer:
+          "For maximum radiance on your event day, we recommend scheduling your facial 2 to 3 days prior. This allows your skin cells to absorb the serums and settle into an effortless natural glow.",
       },
     ],
   },
   {
-    category: "Bridal",
+    category: "Bridal & Festive Makeovers",
     items: [
       {
-        question: "How do bridal appointments work?",
+        question: "How in advance should I book my bridal makeup?",
         answer:
-          "We begin with a consultation to design your look, then recommend a trial ahead of the day so there are no surprises. Day-of styling can take place in the salon or on location by arrangement. We suggest booking bridal services well in advance of your date.",
+          "For wedding and engagement dates (especially during peak wedding and festive seasons), we recommend booking 1 to 3 months in advance to reserve your preferred date and time slot with Vidhi Patel.",
+      },
+      {
+        question: "Do you offer pre-bridal grooming packages?",
+        answer:
+          "Yes! We offer customized pre-bridal care packages including gold/diamond facials, full-body polishing, Rica waxing, hair spa, and luxury manicure-pedicure sessions customized to the bride's wedding schedule.",
+      },
+      {
+        question: "Do you assist with saree and lehenga draping?",
+        answer:
+          "Yes, professional draping is included in all our bridal and occasion packages. We specialize in traditional Gujarati seedha pallu, ulta pallu, and contemporary designer lehenga draping.",
       },
     ],
   },
   {
-    category: "Policies & Payment",
+    category: "Pricing & Payments",
     items: [
-      {
-        question: "What is your cancellation and rescheduling policy?",
-        answer:
-          "We kindly ask for at least 24 hours’ notice to cancel or reschedule so we can offer the time to another guest. Some longer color or bridal services may require a deposit to secure the booking. (Sample policy — the salon owner should confirm exact windows and deposit terms before launch.)",
-      },
-      {
-        question: "How is pricing determined?",
-        answer:
-          "All prices shown are illustrative starting prices in INR. Final pricing depends on hair length, thickness, product usage, and what’s agreed during consultation. We’ll always confirm an estimate with you before we begin.",
-      },
       {
         question: "What payment methods do you accept?",
         answer:
-          "We accept major cards, UPI, and cash. Specific accepted methods may vary — please confirm with the salon. (Sample policy for owner review.)",
+          "We accept all major payment modes including UPI (Google Pay, PhonePe, Paytm, BHIM), Cash, and Card payments.",
+      },
+      {
+        question: "Are prices fixed or do they vary?",
+        answer:
+          "Routine grooming and facial prices are standard. Chemical hair treatments (Keratin, Botox, Global Color, Balayage) have base starting prices that depend slightly on your hair length, density, and product requirement, which we always confirm upfront before beginning.",
       },
     ],
   },
 ];
 
-/** Flattened selection for homepage preview. */
+/** Preview for the homepage (first 4 essentials) */
 export const faqPreview: FAQ[] = [
   faqGroups[0].items[0],
   faqGroups[0].items[1],
-  faqGroups[3].items[0],
   faqGroups[1].items[0],
+  faqGroups[2].items[0],
 ];

@@ -5,11 +5,11 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { faqGroups } from "@/data/faqs";
 import { photo } from "@/data/images";
+import { site, contactInfo } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "FAQ",
-  description:
-    "Frequently asked questions about booking, consultations, colour preparation, timing, cancellations, bridal, pricing, and payment at Maison Aurélle.",
+  title: "Frequently Asked Questions",
+  description: `Common questions and answers regarding appointments, hair treatments, bridal makeup, timings, and location at ${site.name} on Lal Bahadur Shastri Road, Bardoli.`,
   alternates: { canonical: "/faq" },
 };
 
@@ -21,9 +21,9 @@ export default function FAQPage() {
           <SectionHeading
             as="h1"
             align="center"
-            eyebrow="Help"
+            eyebrow="Help &amp; Guidance"
             title="Frequently asked questions"
-            description="Everything you might want to know before your visit. All policies below are reasonable sample defaults marked for the salon owner to review and adjust before launch."
+            description={`Everything you need to know about preparing for your appointment, visiting our Bardoli salon, and our service policies.`}
           />
 
           <div className="mx-auto mt-16 max-w-3xl space-y-16">
@@ -44,13 +44,13 @@ export default function FAQPage() {
 
       <CTASection
         image={photo.brunetteGloss}
-        eyebrow="Still have a question?"
-        title="We’re happy to help"
-        description="Reach out and a member of the team will get back to you."
+        eyebrow="Have another question?"
+        title="We’re always here to assist"
+        description="Feel free to call or WhatsApp us anytime during business hours."
         primaryHref="/contact"
-        primaryLabel="Contact Us"
-        secondaryHref="/booking"
-        secondaryLabel="Book an Appointment"
+        primaryLabel="Contact the Studio"
+        secondaryHref={`tel:${contactInfo.phoneHref}`}
+        secondaryLabel={`Call ${contactInfo.phoneDisplay}`}
       />
     </>
   );

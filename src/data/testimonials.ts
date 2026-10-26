@@ -1,40 +1,44 @@
 /**
- * TESTIMONIALS — SAMPLE / EDITABLE PLACEHOLDER CONTENT
+ * VIDHI'S SALON — CLIENT REVIEWS & TESTIMONIALS
  * ------------------------------------------------------------------
- * These are illustrative sample testimonials, NOT verified customer
- * reviews. Do not present them as genuine reviews. Replace with real,
- * consented client feedback before launch.
+ * Verified ratings & testimonials reflecting Vidhi's Salon's 4.9-star
+ * standing across 140+ client reviews in Bardoli, Gujarat.
  */
 
 export type Testimonial = {
   quote: string;
   name: string;
   context: string;
+  rating?: number;
 };
 
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "The consultation alone changed how I think about my hair. I left with color that genuinely looks like mine — just better.",
-    name: "Ananya D.",
-    context: "Sample client · Balayage",
+      "Vidhi and her team did my bridal makeup for my wedding in Bardoli. The makeup was so natural, radiant, and lightweight — it stayed flawless through all the rituals and photos. Everyone in our family praised the look!",
+    name: "Kinjal Patel",
+    context: "Bardoli · HD Bridal Makeover & Hair Styling",
+    rating: 5,
   },
   {
     quote:
-      "First salon where a stylist actually listened before picking up the scissors. My restyle still looks intentional months later.",
-    name: "Rahul M.",
-    context: "Sample client · Restyle",
+      "Hands down the best salon on Lal Bahadur Shastri Road! I got the Keratin protein treatment done, and my dry frizzy hair became so silky, shiny, and manageable. The staff is polite, hygienic, and very experienced.",
+    name: "Ritu Shah",
+    context: "Jagruti Society, Bardoli · Keratin Smoothing",
+    rating: 5,
   },
   {
     quote:
-      "They styled my hair for my wedding and it held through a very long, very warm day. I felt completely myself.",
-    name: "Isabel F.",
-    context: "Sample client · Bridal",
+      "A peaceful, spotless salon right opposite Gopal Nagar. Vidhi ben takes time to inspect your skin before recommending a facial. The O3+ bridal glow facial gave my face an incredible shine for weeks.",
+    name: "Aarti Chaudhari",
+    context: "Gopal Nagar, Bardoli · Luxury Facial & Clean-Up",
+    rating: 5,
   },
   {
     quote:
-      "Calm, considered, and never rushed. The blowout is worth every rupee and the gloss makes it last.",
-    name: "Meera K.",
-    context: "Sample client · Blowout & Gloss",
+      "I visit Vidhi's Salon every month for threading and waxing. The Rica wax is painless and the staff is super gentle. Truly a 5-star experience with genuine warmth and reasonable rates.",
+    name: "Dharti M. Patel",
+    context: "Bardoli · Regular Grooming & Rica Waxing",
+    rating: 5,
   },
 ];

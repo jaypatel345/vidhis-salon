@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowUpRight, Info } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Container, Section } from "@/components/Container";
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
 import { SmartImage } from "@/components/SmartImage";
@@ -11,15 +9,19 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { unsplash, photo } from "@/data/images";
 import { serviceCategories, inr } from "@/data/services";
 import { faqGroups } from "@/data/faqs";
+import { site, contactInfo } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Services & Pricing",
-  description:
-    "Explore the full Maison Aurélle service menu — haircuts, colour, balayage, highlights, styling, bridal, and restorative treatments. Illustrative starting prices in INR.",
+  description: `Explore the full service menu at ${site.name} in Bardoli, Gujarat — precision haircuts, Keratin protein smoothing, O3+ facials, Rica waxing, and royal bridal makeovers. Competitive starting prices in INR.`,
   alternates: { canonical: "/services" },
 };
 
-const pricingFaqs = [faqGroups[3].items[1], faqGroups[0].items[2], faqGroups[1].items[0]];
+const pricingFaqs = [
+  faqGroups[3].items[1],
+  faqGroups[1].items[0],
+  faqGroups[2].items[0],
+];
 
 export default function ServicesPage() {
   return (
@@ -29,7 +31,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 -z-10 opacity-40">
           <SmartImage
             src={unsplash(photo.colorStation, { w: 2000, q: 70 })}
-            alt=""
+            alt="Vidhi's Salon styling and treatment station"
             fill
             sizes="100vw"
             className="object-cover"
@@ -42,9 +44,9 @@ export default function ServicesPage() {
             <p className="eyebrow text-champagne">The Menu</p>
             <h1 className="display-1 mt-5 text-ivory">Services &amp; pricing</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">
-              A considered menu of cutting, colour, styling, and care. Prices
-              shown are illustrative starting points — your final quote is always
-              confirmed in consultation.
+              Explore our full service menu in hair care, chemical treatments,
+              revitalizing facials, gentle waxing, and signature bridal
+              makeovers at our studio in Bardoli.
             </p>
           </Reveal>
         </Container>
@@ -53,7 +55,10 @@ export default function ServicesPage() {
       {/* Category quick-nav */}
       <div className="sticky top-[73px] z-30 border-b border-espresso/10 bg-ivory/90 backdrop-blur-md">
         <Container>
-          <nav aria-label="Service categories" className="flex gap-6 overflow-x-auto py-4">
+          <nav
+            aria-label="Service categories"
+            className="flex gap-6 overflow-x-auto py-4"
+          >
             {serviceCategories.map((c) => (
               <a
                 key={c.id}
@@ -69,7 +74,11 @@ export default function ServicesPage() {
 
       {/* Categories */}
       {serviceCategories.map((cat, idx) => (
-        <Section key={cat.id} id={cat.id} tone={idx % 2 === 1 ? "cream" : "ivory"}>
+        <Section
+          key={cat.id}
+          id={cat.id}
+          tone={idx % 2 === 1 ? "cream" : "ivory"}
+        >
           <Container>
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               {/* Sticky category intro + image */}
@@ -78,10 +87,10 @@ export default function ServicesPage() {
                   <p className="eyebrow text-bronze">0{idx + 1}</p>
                   <h2 className="display-3 mt-3 text-espresso">{cat.title}</h2>
                   <p className="mt-4 leading-relaxed text-mocha">{cat.blurb}</p>
-                  <div className="img-zoom mt-8 hidden overflow-hidden lg:block">
+                  <div className="img-zoom mt-8 hidden overflow-hidden shadow-sm lg:block">
                     <SmartImage
                       src={unsplash(cat.image, { w: 700 })}
-                      alt={`${cat.title} at Maison Aurélle`}
+                      alt={`${cat.title} at ${site.name}`}
                       width={700}
                       height={520}
                       loading="lazy"
@@ -98,21 +107,38 @@ export default function ServicesPage() {
                     <li key={s.slug}>
                       <Reveal className="flex flex-col gap-4 py-7 sm:flex-row sm:items-start sm:justify-between">
                         <div className="sm:max-w-md">
-                          <h3 className="font-display text-2xl text-espresso">{s.name}</h3>
-                          <p className="mt-2 text-sm leading-relaxed text-mocha">{s.description}</p>
-                          <Link
-                            href="/booking"
-                            className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.16em] text-bronze link-underline"
-                          >
-                            Book this service <ArrowUpRight size={14} />
-                          </Link>
+                          <h3 className="font-display text-2xl text-espresso">
+                            {s.name}
+                          </h3>
+                          <p className="mt-2 text-sm leading-relaxed text-mocha">
+                            {s.description}
+                          </p>
                         </div>
-                        <div className="flex shrink-0 items-center gap-6 sm:flex-col sm:items-end sm:gap-1">
-                          <span className="font-display text-2xl text-espresso">
-                            <span className="text-sm text-stone">from </span>
-                            {inr(s.priceFrom)}
-                          </span>
-                          <span className="text-xs uppercase tracking-[0.14em] text-stone">{s.duration}</span>
+                        <div className="flex shrink-0 flex-row items-baseline justify-between gap-6 sm:flex-col sm:items-end sm:justify-start">
+                          <div className="text-right">
+                            <span className="text-sm font-semibold text-espresso">
+                              <span className="text-stone font-normal text-xs">from</span>{" "}
+                              {inr(s.priceFrom)}
+                            </span>
+                            <span className="block text-xs uppercase tracking-[0.14em] text-stone">
+                              {s.duration}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <a
+                              href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(
+                                `Hello Vidhi's Salon, I would like to book or ask about: ${s.name}.`
+                              )}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[0.7rem] uppercase tracking-wider text-[#128C7E] font-medium hover:underline"
+                            >
+                              <MessageCircle size={13} /> WhatsApp
+                            </a>
+                            <Button href="/booking" size="sm" variant="outline">
+                              Book
+                            </Button>
+                          </div>
                         </div>
                       </Reveal>
                     </li>
@@ -124,50 +150,42 @@ export default function ServicesPage() {
         </Section>
       ))}
 
-      {/* Pricing note */}
-      <Section tone="espresso" className="py-16 sm:py-20">
-        <Container>
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
-            <Info size={24} className="shrink-0 text-champagne" />
-            <div>
-              <h2 className="font-display text-2xl text-ivory">A note on pricing</h2>
-              <p className="mt-3 max-w-3xl leading-relaxed text-ivory/75">
-                All prices are illustrative starting prices shown in INR and marked
-                “from”. Final pricing may vary depending on hair length, thickness,
-                density, product usage, and what’s agreed during your consultation.
-                We’ll always confirm a clear estimate before beginning any service.
-                These figures are sample values the salon owner can fully customize.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       {/* FAQ */}
-      <Section>
+      <Section tone="espresso">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
-              <SectionHeading
-                eyebrow="Before you book"
-                title="Service questions"
-                description="A few quick answers to help you choose."
-              />
+              <p className="eyebrow text-champagne">Good to know</p>
+              <h2 className="display-3 mt-3 text-ivory">Service &amp; pricing FAQs</h2>
+              <p className="mt-4 text-sm leading-relaxed text-ivory/70">
+                Transparent guidance on product choices, consultations, and timing.
+              </p>
               <div className="mt-8">
-                <Button href="/faq" variant="outline">All FAQs</Button>
+                <Button href="/faq" variant="light">
+                  All FAQs
+                </Button>
               </div>
             </div>
             <div className="lg:col-span-8">
-              <FAQAccordion items={pricingFaqs} idPrefix="services-faq" />
+              <FAQAccordion
+                items={pricingFaqs}
+                idPrefix="pricing-faq"
+              />
             </div>
           </div>
         </Container>
       </Section>
 
+      {/* CTA */}
       <CTASection
         image={photo.colorStation}
-        title="Ready to book your service?"
-        description="Choose your service and preferred stylist in a few simple steps."
+        eyebrow="Ready to visit?"
+        title="Reserve your chair in Bardoli"
+        description="Book online or contact us directly on WhatsApp / Phone."
+        primaryHref="/booking"
+        primaryLabel="Book an Appointment"
+        secondaryHref={`tel:${contactInfo.phoneHref}`}
+        secondaryLabel={`Call ${contactInfo.phoneDisplay}`}
       />
     </>
   );

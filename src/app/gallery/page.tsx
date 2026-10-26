@@ -4,11 +4,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Gallery } from "@/components/Gallery";
 import { CTASection } from "@/components/CTASection";
 import { photo } from "@/data/images";
+import { site, contactInfo } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Gallery",
-  description:
-    "Browse the Maison Aurélle portfolio — haircuts, balayage, highlights, colour, blowouts, bridal styling, and salon interiors. Filter by category and view full-size.",
+  title: "Portfolio & Gallery",
+  description: `Browse the work portfolio of ${site.name} in Bardoli, Gujarat — precision haircutting, bridal hairstyling, Keratin hair smoothing, radiant facials, and salon atmosphere.`,
   alternates: { canonical: "/gallery" },
 };
 
@@ -20,8 +20,8 @@ export default function GalleryPage() {
           <SectionHeading
             as="h1"
             eyebrow="Portfolio"
-            title="The gallery"
-            description="A curated look at our work across colour, cutting, styling, and the space itself. Filter by category and tap any image to view it full-size. These are editorial images representing our aesthetic — not specific client case studies."
+            title="The Salon Gallery"
+            description={`Explore our craft across hair transformations, royal bridal styling, restorative hair treatments, and the warm atmosphere of our studio at ${site.name}, Lal Bahadur Shastri Road, Bardoli.`}
           />
         </Container>
       </Section>
@@ -34,9 +34,13 @@ export default function GalleryPage() {
 
       <CTASection
         image={photo.glossyWaves}
-        eyebrow="Like what you see?"
-        title="Let’s create yours"
-        description="Book a consultation and we’ll design a look tailored to you."
+        eyebrow="Ready for your transformation?"
+        title="Let’s create your signature look"
+        description="Book your appointment today at Vidhi's Salon on Lal Bahadur Shastri Road, Bardoli."
+        primaryHref="/booking"
+        primaryLabel="Book an Appointment"
+        secondaryHref={`tel:${contactInfo.phoneHref}`}
+        secondaryLabel={`Call ${contactInfo.phoneDisplay}`}
       />
     </>
   );

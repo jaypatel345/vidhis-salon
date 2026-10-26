@@ -1,110 +1,55 @@
-# Maison Aurélle — Hair Atelier
+# Vidhi's Salon — Hair, Beauty & Bridal Studio (Bardoli, Gujarat)
 
-A complete, production-quality marketing website for a **fictional** premium hair
-salon, built as an agency-grade demonstration.
+Official, production-grade responsive website for **Vidhi's Salon** (also known as *Vidhi Beauty Parlour*), located on Lal Bahadur Shastri Road in Bardoli, Gujarat.
 
-> **Demo brand disclosure.** Maison Aurélle is a fictional sample brand. All
-> business details (address, phone, email, hours), stylist profiles,
-> testimonials, offers, prices, and policies are **illustrative placeholder
-> content** for demonstration only — not verified real-world information.
-> Replace everything marked as sample before any real launch.
+## Business Details
 
-## Stack
+- **Business Name:** Vidhi's Salon / Vidhi Beauty Parlour
+- **Google Search & Maps Listing:** [Google Search Profile](https://share.google/NFCkcM0IBWwtg1kay) (`kgmid=/g/1vyn2b0z`)
+- **Rating:** 4.9 / 5.0 stars based on 140+ verified local reviews
+- **Address:** “Vardan”, Opposite Gopal Nagar, Lal Bahadur Shastri Road, Near Swaminarayan Temple, Jagruti Society, Bardoli, Gujarat, 394601, India
+- **Phone / WhatsApp:** [+91 99251 72388](tel:+919925172388) · [Chat on WhatsApp](https://wa.me/919925172388)
+- **Timings:**
+  - Monday – Saturday: 09:30 AM – 07:00 PM
+  - Sunday: 10:00 AM – 02:00 PM (Bridal / Occasion makeovers by advance appointment)
 
-- **Next.js 16** (App Router) + **React 19**
+## Tech Stack
+
+- **Next.js 16** (App Router with Turbopack) + **React 19**
 - **TypeScript**
-- **Tailwind CSS v4** (CSS-first `@theme` design tokens, via `@tailwindcss/postcss`)
+- **Tailwind CSS v4** (CSS-first `@theme` design tokens)
 - **lucide-react** icons
 - **next/font** (Cormorant Garamond display serif + Jost sans body)
-- **next/image** with remote optimization for Unsplash photography
+- **Schema.org JSON-LD** local business rich snippet (`HairSalon`, `BeautySalon`)
+- **Interactive WhatsApp Appointment Booking** & direct phone integration
 
-## Getting started
+## Pages
+
+| Route | Page Description |
+|---|---|
+| `/` | Homepage (Editorial hero, local heritage, signature services, reviews, studio atmosphere, offers) |
+| `/services` | Full service menu & pricing in INR (Haircuts, Keratin, Facials, Rica Waxing, Bridal) |
+| `/stylists` | Artist & Beautician profiles (Founder Vidhi Patel & specialized team) |
+| `/gallery` | Work portfolio & studio gallery with category filtering |
+| `/about` | Brand story, values, hygiene standards, and Bardoli landmark details |
+| `/booking` | Multi-step appointment request flow with 1-click WhatsApp confirmation |
+| `/contact` | Verified contact details, direct calling, Google Maps embed, directions & inquiry form |
+| `/faq` | Frequently asked questions on appointments, timings, pricing, and bridal prep |
+| `/privacy` | Privacy policy |
+| `/terms` | Salon terms & booking conditions |
+
+## Running Locally
 
 ```bash
 npm install
-npm run dev     # http://localhost:3000
+npm run dev
 ```
 
-Production:
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+Build for production:
 
 ```bash
 npm run build
 npm run start
 ```
-
-Lint / type-check:
-
-```bash
-npm run lint
-npx tsc --noEmit
-```
-
-## Pages (all routes verified 200)
-
-| Route        | Page                                   |
-|--------------|----------------------------------------|
-| `/`          | Home (editorial, 12 sections)          |
-| `/services`  | Services & pricing (4 categories)      |
-| `/stylists`  | Our stylists (alternating profiles)    |
-| `/gallery`   | Gallery (filters + accessible lightbox)|
-| `/about`     | About / brand story                    |
-| `/booking`   | Multi-step appointment booking (demo)  |
-| `/contact`   | Contact (form + map + details)         |
-| `/faq`       | FAQ (accessible accordions)            |
-| `/privacy`   | Privacy policy (sample)                |
-| `/terms`     | Terms & conditions (sample)            |
-| `*`          | Custom 404 (`not-found.tsx`)           |
-
-Plus generated `sitemap.xml` and `robots.txt`.
-
-## Design system
-
-Defined in `src/app/globals.css` via Tailwind `@theme` tokens:
-
-- **Colors:** warm ivory ground, espresso ink, champagne/bronze accents.
-- **Type:** Cormorant Garamond (display) + Jost (body); fluid `display-1/2/3` scale.
-- **Motion:** scroll reveals, image zoom-on-hover, animated underlines — all
-  respect `prefers-reduced-motion`.
-- **A11y:** skip link, visible focus rings, semantic headings, labeled controls.
-
-## Content is data-driven
-
-Edit these files — no component changes needed:
-
-- `src/data/site.ts` — name, contact, hours, social, nav
-- `src/data/services.ts` — service menu, INR prices, durations
-- `src/data/stylists.ts` — team profiles
-- `src/data/testimonials.ts` — sample testimonials
-- `src/data/faqs.ts` — FAQ content
-- `src/data/gallery.ts` — gallery images + categories
-- `src/data/images.ts` — verified Unsplash photo library + `unsplash()` helper
-
-## Working interactions
-
-- Desktop + mobile navigation (scroll-aware, scroll-locking mobile menu)
-- Gallery category filtering + lightbox (click, prev/next, Esc, arrow keys)
-- FAQ accordions (ARIA `expanded`/`controls`, keyboard operable)
-- 6-step booking flow with per-step validation, progress indicator, summary,
-  and confirmation screen
-- Contact form with client-side validation and success state
-- `SmartImage` renders a branded fallback instead of a broken image if a remote
-  photo fails to load
-
-## Honest limitations (demo-only behaviors)
-
-- **Booking** is a **front-end demonstration**. Submitting does **not** send,
-  store, or confirm a real appointment. The final step is structured as a clean
-  integration boundary for a real scheduling API/backend.
-- **Contact form** validates in the browser but does **not** transmit messages.
-- **Map**, **social links**, and **Instagram** section use sample
-  locations/handles — connect real ones before launch.
-- **Structured data** (`HairSalon` JSON-LD) uses placeholder business values and
-  deliberately contains **no fake ratings or reviews**.
-- Photography is editorial/stock imagery illustrating the aesthetic — it does
-  **not** document specific real client results.
-
-## Image sources
-
-All photography is served from Unsplash via `next/image`. The remote host is
-allow-listed in `next.config.ts`. Every photo ID in `src/data/images.ts` was
-verified reachable (HTTP 200) during the build.

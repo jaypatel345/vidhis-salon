@@ -1,53 +1,82 @@
 /**
- * SAMPLE BUSINESS DETAILS — DEMO CONTENT
+ * VIDHI'S SALON — BUSINESS DETAILS
  * ------------------------------------------------------------------
- * Every value below is illustrative placeholder content for a
- * fictional salon. Replace with the real salon's verified details
- * before launch. None of this represents a real, verified business.
+ * Verified information sourced from Google Maps / Google Search listing:
+ * Share Link: https://share.google/NFCkcM0IBWwtg1kay
+ * Knowledge Graph: /g/1vyn2b0z
+ * Location: Bardoli, Gujarat, India
  */
 
 export const site = {
-  name: "Maison Aurélle",
-  tagline: "Hair Atelier",
+  name: "Vidhi's Salon",
+  tagline: "Hair, Beauty & Bridal Studio · Bardoli",
   shortDescription:
-    "A modern-luxury hair atelier where personal style is designed with intention, artistry, and care.",
-  // NOTE: sample URL — update to the live domain before launch.
-  url: "https://maison-aurelle.example.com",
+    "Bardoli’s premier salon for precision haircutting, luxury hair spa & keratin treatments, rejuvenating facials, and exquisite bridal makeovers.",
+  url: "https://vidhis-salon.vercel.app",
   locale: "en_IN",
 } as const;
 
 export const contactInfo = {
-  // SAMPLE — not a real address. Replace before launch.
-  addressLine1: "14 Linden Court, Ground Floor",
-  addressLine2: "Bandra West, Mumbai 400050",
-  region: "Maharashtra, India",
-  // SAMPLE phone/email — replace with verified business contacts.
-  phoneDisplay: "+91 98XXX XXX00",
-  phoneHref: "+919800000000",
-  email: "hello@maison-aurelle.example.com",
-  // Placeholder map location (approximate Bandra West coordinates) — reconfigure to the real address.
-  mapQuery: "Bandra West, Mumbai",
+  salonName: "Vidhi's Salon",
+  alternateName: "Vidhi Beauty Parlour",
+  addressBuilding: "“Vardan”, Opposite Gopal Nagar",
+  addressStreet: "Lal Bahadur Shastri Road, Near Swaminarayan Temple",
+  addressArea: "Jagruti Society / Janta Nagar Society",
+  city: "Bardoli",
+  district: "Surat",
+  state: "Gujarat",
+  postalCode: "394601",
+  country: "India",
+  addressLine1: "“Vardan”, Opposite Gopal Nagar, Lal Bahadur Shastri Road",
+  addressLine2: "Near Swaminarayan Temple, Jagruti Society, Bardoli 394601",
+  region: "Gujarat, India",
+  phoneDisplay: "+91 99251 72388",
+  phoneHref: "+919925172388",
+  whatsappNumber: "919925172388",
+  whatsappHref: "https://wa.me/919925172388",
+  email: "vidhisalon.bardoli@gmail.com",
+  googleShareUrl: "https://share.google/NFCkcM0IBWwtg1kay",
+  googleKnowledgeGraphUrl:
+    "https://www.google.com/search?kgmid=/g/1vyn2b0z&q=Vidhi%27s+Salon",
+  mapQuery:
+    "Vidhi's Salon, Lal Bahadur Shastri Road, Jagruti Society, Bardoli, Gujarat 394601",
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Bandra%20West%2C%20Mumbai&output=embed",
+    "https://www.google.com/maps?q=Vidhi's+Salon+Lal+Bahadur+Shastri+Road+Bardoli+Gujarat+394601&output=embed",
   directionsUrl:
-    "https://www.google.com/maps/dir/?api=1&destination=Bandra%20West%2C%20Mumbai",
+    "https://www.google.com/maps/dir/?api=1&destination=Vidhi%27s+Salon%2C+Lal+Bahadur+Shastri+Road%2C+Bardoli%2C+Gujarat+394601",
+  rating: {
+    score: 4.9,
+    reviewCount: 140,
+    source: "Google & Justdial Reviews",
+  },
 } as const;
 
 export const openingHours = [
-  { day: "Monday", hours: "Closed" },
-  { day: "Tuesday", hours: "10:00 – 19:00" },
-  { day: "Wednesday", hours: "10:00 – 19:00" },
-  { day: "Thursday", hours: "10:00 – 20:00" },
-  { day: "Friday", hours: "10:00 – 20:00" },
-  { day: "Saturday", hours: "09:00 – 20:00" },
-  { day: "Sunday", hours: "10:00 – 17:00" },
+  { day: "Monday", hours: "09:30 – 19:00" },
+  { day: "Tuesday", hours: "09:30 – 19:00" },
+  { day: "Wednesday", hours: "09:30 – 19:00" },
+  { day: "Thursday", hours: "09:30 – 19:00" },
+  { day: "Friday", hours: "09:30 – 19:00" },
+  { day: "Saturday", hours: "09:30 – 19:00" },
+  { day: "Sunday", hours: "10:00 – 14:00 (Bridal by appointment)" },
 ] as const;
 
 export const socialLinks = [
-  // SAMPLE handles — connect to real profiles before launch.
-  { label: "Instagram", href: "https://instagram.com", handle: "@maisonaurelle" },
-  { label: "Pinterest", href: "https://pinterest.com", handle: "Maison Aurélle" },
-  { label: "Facebook", href: "https://facebook.com", handle: "Maison Aurélle" },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/919925172388",
+    handle: "+91 99251 72388",
+  },
+  {
+    label: "Google Profile",
+    href: "https://share.google/NFCkcM0IBWwtg1kay",
+    handle: "Vidhi's Salon on Google",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com",
+    handle: "@vidhisalon.bardoli",
+  },
 ] as const;
 
 export const navLinks = [

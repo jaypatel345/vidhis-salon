@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
-import { site } from "@/data/site";
+import { site, contactInfo } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description:
-    "Sample privacy policy for the Maison Aurélle website prototype. Editable placeholder content — not legal advice.",
+  description: `Privacy Policy for ${site.name} (${contactInfo.alternateName}) in Bardoli, Gujarat.`,
   alternates: { canonical: "/privacy" },
   robots: { index: false, follow: true },
 };
@@ -13,47 +12,44 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <LegalPage
-      eyebrow="Legal"
+      eyebrow="Legal &amp; Privacy"
       title="Privacy Policy"
-      updated="Sample date — update before launch"
-      intro={`This Privacy Policy explains, in sample form, how ${site.name} would collect, use, and protect personal information submitted through this website. Replace each section with your real, reviewed policy.`}
+      updated="October 2026"
+      intro={`This Privacy Policy outlines how ${site.name} (“we”, “our”, or “us”) collects, uses, and safeguards client information submitted through our website or direct communications.`}
       sections={[
         {
-          heading: "Information we collect",
+          heading: "Information We Collect",
           body: [
-            "When you use our appointment or contact forms, we may collect details such as your name, email address, phone number, and any notes you choose to provide.",
-            "In this prototype, form submissions are processed in your browser and are not transmitted to or stored by a server. A live deployment would describe exactly what is collected and where it is stored.",
+            "When you request an appointment, submit an inquiry, or message us via WhatsApp or phone, we collect details such as your full name, phone number, email address, preferred appointment date, time, and service notes.",
+            "We only collect information that you knowingly and voluntarily provide to facilitate your salon booking and customer service experience.",
           ],
         },
         {
-          heading: "How we use information",
+          heading: "How We Use Your Information",
           body: [
-            "Information would be used to respond to enquiries, arrange and confirm appointments, and provide the services you request.",
-            "We would not sell your personal information. Any sharing with service providers (for example, a scheduling platform) would be limited to what is necessary to deliver the service.",
+            "Your contact details are used strictly to coordinate, confirm, or reschedule your appointments at our salon in Bardoli.",
+            "To send you appointment confirmations, service reminders, or answer specific beauty/bridal inquiries.",
+            "We respect your privacy and never sell, rent, or trade your personal information to third parties.",
           ],
         },
         {
-          heading: "Cookies and analytics",
+          heading: "Communication Preferences",
           body: [
-            "A live site may use essential cookies and, optionally, privacy-respecting analytics to understand how the site is used. You would be able to manage non-essential cookies where applicable.",
+            "We communicate primarily via direct phone calls or WhatsApp for appointment scheduling and consultation. You may request to cease receiving updates from us at any time.",
           ],
         },
         {
-          heading: "Data retention and security",
+          heading: "Data Security",
           body: [
-            "We would retain personal information only as long as necessary for the purposes described here or as required by law, and apply reasonable safeguards to protect it.",
+            "We employ appropriate security measures to safeguard all client information submitted online or stored locally.",
           ],
         },
         {
-          heading: "Your rights",
+          heading: "Contacting Us",
           body: [
-            "Depending on your location, you may have rights to access, correct, or request deletion of your personal information. A live policy would explain how to exercise these rights.",
-          ],
-        },
-        {
-          heading: "Contact",
-          body: [
-            `Questions about this sample policy can be directed to ${site.name} using the details on our Contact page. Replace with a monitored privacy contact before launch.`,
+            `If you have any questions regarding this Privacy Policy or your personal details, please contact ${site.name} at:`,
+            `Address: ${contactInfo.addressLine1}, ${contactInfo.addressLine2}`,
+            `Phone: ${contactInfo.phoneDisplay} | Email: ${contactInfo.email}`,
           ],
         },
       ]}

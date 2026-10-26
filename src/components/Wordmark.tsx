@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { site } from "@/data/site";
 
 export function Wordmark({
   className,
@@ -11,7 +12,7 @@ export function Wordmark({
   return (
     <Link
       href="/"
-      aria-label="Maison Aurélle — home"
+      aria-label={`${site.name} — home`}
       className={cn("group inline-flex flex-col leading-none", className)}
     >
       <span
@@ -20,15 +21,15 @@ export function Wordmark({
           tone === "light" ? "text-ivory" : "text-espresso"
         )}
       >
-        Maison Aurélle
+        {site.name}
       </span>
       <span
         className={cn(
-          "mt-1 text-[0.6rem] font-medium uppercase tracking-[0.42em]",
+          "mt-1 text-[0.6rem] font-medium uppercase tracking-[0.38em]",
           tone === "light" ? "text-ivory/60" : "text-bronze"
         )}
       >
-        Hair Atelier
+        Hair &amp; Beauty Studio · Bardoli
       </span>
     </Link>
   );

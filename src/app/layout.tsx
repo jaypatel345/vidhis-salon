@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { StructuredData } from "@/components/StructuredData";
-import { site } from "@/data/site";
+import { site, contactInfo } from "@/data/site";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -29,14 +29,17 @@ export const metadata: Metadata = {
   },
   description: site.shortDescription,
   keywords: [
-    "hair salon",
-    "balayage",
-    "hair color",
-    "highlights",
-    "blowout",
-    "bridal hair",
-    "haircut",
-    "Mumbai hair salon",
+    "Vidhi's Salon",
+    "Vidhi Beauty Parlour Bardoli",
+    "salon in Bardoli",
+    "beauty parlour in Bardoli",
+    "best salon in Bardoli Gujarat",
+    "bridal makeup artist Bardoli",
+    "keratin treatment Bardoli",
+    "hair spa Bardoli",
+    "O3+ facials Bardoli",
+    "Lal Bahadur Shastri Road salon",
+    "Gopal Nagar Bardoli salon",
   ],
   openGraph: {
     type: "website",
@@ -72,6 +75,27 @@ export default function RootLayout({
         <Navbar />
         <main id="main">{children}</main>
         <Footer />
+
+        {/* Floating Quick Contact Pill for mobile and desktop */}
+        <div className="fixed bottom-5 right-5 z-40 flex items-center gap-2">
+          <a
+            href={contactInfo.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white shadow-lg transition-transform hover:scale-105"
+          >
+            <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+            WhatsApp
+          </a>
+          <a
+            href={`tel:${contactInfo.phoneHref}`}
+            aria-label="Call salon directly"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-espresso text-ivory shadow-lg transition-transform hover:scale-105 sm:hidden"
+          >
+            📞
+          </a>
+        </div>
       </body>
     </html>
   );

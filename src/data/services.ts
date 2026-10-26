@@ -1,10 +1,8 @@
 /**
- * SERVICE MENU — SAMPLE PRICING (DEMO)
+ * VIDHI'S SALON — SERVICE MENU & PRICING
  * ------------------------------------------------------------------
- * Prices are illustrative, shown in INR, and marked "from" because
- * final pricing depends on hair length, density, product use, and
- * consultation. The salon owner should review and customize all
- * prices, durations, and descriptions before launch.
+ * Services & indicative starting pricing tailored for Vidhi's Salon
+ * (Lal Bahadur Shastri Road, Bardoli, Gujarat).
  */
 
 import { photo, type PhotoKey } from "./images";
@@ -37,214 +35,290 @@ export const inr = (n: number) =>
 export const serviceCategories: ServiceCategory[] = [
   {
     id: "haircuts",
-    title: "Haircuts",
+    title: "Haircuts & Styling",
     blurb:
-      "Precision cutting shaped to your face, hair texture, and the way you actually live day to day.",
+      "Precision cuts, feathering, blowouts, and custom styling tailored to your face shape, hair texture, and daily lifestyle.",
     image: photo.cutting,
     services: [
       {
-        slug: "womens-haircut",
-        name: "Women’s Haircut",
+        slug: "womens-haircut-styling",
+        name: "Women’s Haircut & Styling",
         description:
-          "A consultation-led cut and finish tailored to your texture, growth patterns, and styling routine.",
-        priceFrom: 2400,
-        duration: "60 min",
+          "Consultation-led haircut, soothing hair wash, blow-dry, and signature styling to flatter your facial structure.",
+        priceFrom: 350,
+        duration: "45 min",
         image: photo.longWaves,
         featured: true,
       },
       {
-        slug: "mens-haircut",
-        name: "Men’s Haircut",
+        slug: "layer-feather-cut",
+        name: "Advanced Layer & Feather Cut",
         description:
-          "Tailored cutting and detailing with a clean, considered finish — scissor or clipper work.",
-        priceFrom: 1500,
-        duration: "45 min",
-        image: photo.menCut,
-      },
-      {
-        slug: "restyle-haircut",
-        name: "Restyle Haircut",
-        description:
-          "A fuller consultation for a meaningful change of shape, length, or direction.",
-        priceFrom: 3200,
-        duration: "75 min",
+          "Multi-layered graduation and texturing for voluminous movement, healthy bounce, and effortless styling.",
+        priceFrom: 550,
+        duration: "60 min",
         image: photo.womanProfile,
-      },
-      {
-        slug: "fringe-trim",
-        name: "Fringe Trim",
-        description:
-          "A quick refresh to keep your fringe sitting exactly where it should between cuts.",
-        priceFrom: 500,
-        duration: "20 min",
-      },
-      {
-        slug: "childrens-haircut",
-        name: "Children’s Haircut",
-        description:
-          "A gentle, unhurried cut for younger guests (12 and under) in a calm setting.",
-        priceFrom: 900,
-        duration: "30 min",
-      },
-    ],
-  },
-  {
-    id: "coloring",
-    title: "Hair Coloring",
-    blurb:
-      "Dimensional, lived-in color built on healthy hair — from quiet root work to full transformations.",
-    image: photo.colorStation,
-    services: [
-      {
-        slug: "root-touch-up",
-        name: "Root Touch-Up",
-        description:
-          "Seamless regrowth coverage matched precisely to your existing color.",
-        priceFrom: 2800,
-        duration: "75 min",
-        image: photo.brunetteGloss,
-      },
-      {
-        slug: "full-color",
-        name: "Full Color",
-        description:
-          "All-over, single-process color for rich, even, long-wearing results.",
-        priceFrom: 3800,
-        duration: "120 min",
         featured: true,
-        image: photo.copperColor,
       },
       {
-        slug: "gloss-toner",
-        name: "Gloss / Toner",
+        slug: "signature-blowout-ironing",
+        name: "Signature Blowout & Thermal Styling",
         description:
-          "A shine-boosting, tone-refining treatment that neutralizes brass and adds depth.",
-        priceFrom: 1800,
+          "Hydrating wash, heat defense prep, and glossy bouncy blowout or sleek flat-iron finish for any special outing.",
+        priceFrom: 450,
         duration: "45 min",
-        image: photo.glossyWaves,
-      },
-      {
-        slug: "partial-highlights",
-        name: "Partial Highlights",
-        description:
-          "Face-framing and crown placement to brighten and add movement where it reads most.",
-        priceFrom: 4500,
-        duration: "120 min",
-        image: photo.blondeHighlights,
-      },
-      {
-        slug: "full-highlights",
-        name: "Full Highlights",
-        description:
-          "Full-head foils for luminous, all-over dimension and a brighter base.",
-        priceFrom: 6500,
-        duration: "180 min",
-      },
-      {
-        slug: "balayage",
-        name: "Balayage",
-        description:
-          "Hand-painted, sun-grown color with a soft grow-out and effortless dimension.",
-        priceFrom: 7500,
-        duration: "210 min",
-        featured: true,
-        image: photo.balayage,
-      },
-      {
-        slug: "color-correction-consultation",
-        name: "Color Correction Consultation",
-        description:
-          "An in-depth assessment and plan for complex color change. Required before correction work is booked.",
-        priceFrom: 800,
-        duration: "30 min",
-      },
-    ],
-  },
-  {
-    id: "styling",
-    title: "Styling",
-    blurb:
-      "Finish that lasts — for an ordinary Tuesday, a milestone evening, or the morning you say ‘I do’.",
-    image: photo.blowoutMotion,
-    services: [
-      {
-        slug: "signature-blowout",
-        name: "Signature Blowout",
-        description:
-          "Our pressing-and-shaping blow-dry for smooth, voluminous, camera-ready hair.",
-        priceFrom: 1600,
-        duration: "45 min",
-        featured: true,
         image: photo.blowoutMotion,
       },
       {
-        slug: "event-styling",
-        name: "Event Styling",
+        slug: "split-ends-trimming",
+        name: "Split Ends Removal & Deep Conditioning Wash",
         description:
-          "Red-carpet-ready waves, sleek looks, or structured upstyles for a special occasion.",
-        priceFrom: 2800,
-        duration: "60 min",
-        image: photo.updo,
+          "Precision health trim to preserve your hair length while removing dry, split ends, followed by a nourishing mask.",
+        priceFrom: 300,
+        duration: "30 min",
       },
       {
-        slug: "bridal-hair-consultation",
-        name: "Bridal Hair Consultation",
+        slug: "mens-haircut",
+        name: "Men’s Grooming & Haircut",
         description:
-          "A relaxed sit-down to design your look, discuss timing, and plan a trial.",
-        priceFrom: 1500,
-        duration: "45 min",
+          "Clean clipper and scissor fade, sideburn shaping, and styled finish with premium grooming products.",
+        priceFrom: 200,
+        duration: "30 min",
+        image: photo.menCut,
       },
       {
-        slug: "bridal-styling",
-        name: "Bridal Styling",
+        slug: "kids-haircut",
+        name: "Kids Haircut",
         description:
-          "Day-of styling crafted to hold through the longest, most photographed day of your life.",
-        priceFrom: 9500,
-        duration: "120 min",
-        image: photo.bridalUpdo,
+          "Gentle, patient haircutting experience for younger guests in a comfortable environment.",
+        priceFrom: 180,
+        duration: "25 min",
       },
     ],
   },
   {
-    id: "treatments",
-    title: "Hair Treatments",
+    id: "treatments-color",
+    title: "Color & Hair Treatments",
     blurb:
-      "Restorative care that treats the hair and the scalp — the foundation of everything else.",
-    image: photo.treatmentCare,
+      "Transformative hair therapies using leading professional brands (L'Oréal, Matrix, Schwarzkopf) for silky, healthy, radiant hair.",
+    image: photo.colorStation,
     services: [
       {
-        slug: "deep-conditioning",
-        name: "Deep Conditioning",
+        slug: "keratin-smoothing",
+        name: "Keratin Protein Smoothing Treatment",
         description:
-          "An intensive moisture treatment to soften, smooth, and revive dry or stressed hair.",
-        priceFrom: 1400,
-        duration: "30 min",
-        image: photo.washStation,
+          "Intensive formaldehyde-safe protein infusion that tames unruly frizz, eliminates curl bulk, and grants mirror-like shine for up to 4–6 months.",
+        priceFrom: 3500,
+        duration: "180 min",
+        featured: true,
+        image: photo.glossyWaves,
       },
       {
-        slug: "bond-repair-treatment",
-        name: "Bond-Repair Treatment",
+        slug: "hair-botox-nourishing",
+        name: "Hair Botox & Deep Repair Therapy",
         description:
-          "A strengthening service that helps rebuild internal bonds weakened by color or heat.",
-        priceFrom: 2200,
-        duration: "45 min",
-        featured: true,
+          "Anti-aging deep conditioner that reconstructs damaged hair fibres, restores natural elasticity, and revitalizes chemically treated hair.",
+        priceFrom: 3800,
+        duration: "150 min",
         image: photo.treatmentCare,
       },
       {
-        slug: "scalp-care",
-        name: "Scalp Care",
+        slug: "loreal-hair-spa",
+        name: "L'Oréal Professional Hair Spa",
         description:
-          "A clarifying, soothing scalp ritual to rebalance and support healthier growth.",
+          "Relaxing scalp massage, deep steam conditioning, and custom ampoules targeting dandruff, hair fall, or extreme dryness.",
+        priceFrom: 850,
+        duration: "60 min",
+        featured: true,
+        image: photo.washStation,
+      },
+      {
+        slug: "global-hair-color",
+        name: "Global Hair Color (Ammonia-Free)",
+        description:
+          "Rich, uniform color coverage from roots to tips with nourishing conditioning oils for radiant shine and grey coverage.",
+        priceFrom: 2200,
+        duration: "120 min",
+        image: photo.copperColor,
+      },
+      {
+        slug: "balayage-highlights",
+        name: "Balayage & Dimensional Highlights",
+        description:
+          "Seamless hand-painted streaks and sun-kissed ombre ribbons for rich dimension, personalized to your skin tone.",
+        priceFrom: 2800,
+        duration: "180 min",
+        image: photo.balayage,
+      },
+      {
+        slug: "root-touchup",
+        name: "Root Touch-Up & Regrowth Tint",
+        description:
+          "Fast, 100% grey coverage matched seamlessly to your existing hair color with gentle scalp protection.",
+        priceFrom: 900,
+        duration: "60 min",
+        image: photo.brunetteGloss,
+      },
+    ],
+  },
+  {
+    id: "facials-skincare",
+    title: "Facials & Skin Care",
+    blurb:
+      "Clinical and herbal skin therapies designed to revitalize dull skin, remove sun tan, and unlock youthful, luminous radiance.",
+    image: photo.smilingWoman,
+    services: [
+      {
+        slug: "bridal-glow-facial",
+        name: "Vidhi’s Signature Bridal Glow Facial",
+        description:
+          "Exclusive multi-step luxury facial with ultrasonic infusion, oxygenating serum, and collagen peel-off mask for breathtaking photo-ready luminosity.",
+        priceFrom: 2500,
+        duration: "90 min",
+        featured: true,
+        image: photo.smilingWoman,
+      },
+      {
+        slug: "o3-luxury-facial",
+        name: "O3+ Radiance / Diamond Glow Facial",
+        description:
+          "Premium brightening treatment that evens skin tone, reduces pigmentation, and delivers an instant luminous glass-skin finish.",
         priceFrom: 1800,
+        duration: "75 min",
+        image: photo.portraitRed,
+      },
+      {
+        slug: "herbal-fruit-facial",
+        name: "Herbal & Organic Fruit Facial",
+        description:
+          "Gentle Ayurvedic and fruit enzyme therapy for sensitive skin, clearing impurities while deeply hydrating.",
+        priceFrom: 950,
+        duration: "60 min",
+      },
+      {
+        slug: "deep-pore-cleanup",
+        name: "Deep Cleansing Herbal Clean-Up",
+        description:
+          "Steam extraction, blackhead clearing, gentle exfoliation, and soothing pack for clear, breathing skin.",
+        priceFrom: 550,
+        duration: "45 min",
+      },
+      {
+        slug: "face-dtan-bleach",
+        name: "Raaga D-Tan & Oxy-Bleach Therapy",
+        description:
+          "Instant tan reversal and mild pigmentation lightening using dermatologist-approved soothing milk & honey formulations.",
+        priceFrom: 450,
+        duration: "35 min",
+      },
+      {
+        slug: "back-polishing",
+        name: "Full Back Polishing & Glow Ritual",
+        description:
+          "Exfoliating scrub, hydrating massage, and detox pack for spotless back and shoulders — ideal before wedding functions.",
+        priceFrom: 850,
+        duration: "45 min",
+      },
+    ],
+  },
+  {
+    id: "grooming-waxing",
+    title: "Grooming & Body Care",
+    blurb:
+      "Impeccable hygiene, gentle waxing formulations, detailed threading, and pampering hand & foot spa rituals.",
+    image: photo.mirrorStation,
+    services: [
+      {
+        slug: "rica-liposoluble-waxing",
+        name: "Rica Italian Waxing (Full Arms & Legs)",
+        description:
+          "Colophony-free Italian liposoluble wax that is gentle on sensitive skin, extracts fine hair from roots, and delays regrowth.",
+        priceFrom: 850,
+        duration: "50 min",
+        featured: true,
+      },
+      {
+        slug: "honey-waxing-full",
+        name: "Full Arms & Legs Honey Waxing",
+        description:
+          "Hygienic, smooth hair removal with herbal soothing lotion application post-waxing.",
+        priceFrom: 450,
         duration: "40 min",
       },
       {
-        slug: "hair-scalp-consultation",
-        name: "Hair & Scalp Consultation",
+        slug: "threading-eyebrow-face",
+        name: "Eyebrow Shaping & Full Face Threading",
         description:
-          "A focused assessment of condition and routine, with a tailored care plan to take home.",
-        priceFrom: 600,
+          "High-precision organic cotton threading for clean eyebrow arches, upper lip, chin, and forehead.",
+        priceFrom: 180,
+        duration: "25 min",
+      },
+      {
+        slug: "luxury-rose-pedicure",
+        name: "Luxury Rose & Mint Spa Pedicure",
+        description:
+          "Warm botanical foot soak, sea salt scrub, cracked heel buffering, cuticle therapy, massage, and nail lacquer.",
+        priceFrom: 550,
+        duration: "50 min",
+      },
+      {
+        slug: "deluxe-spa-manicure",
+        name: "Deluxe Anti-Tan Spa Manicure",
+        description:
+          "Restorative hand exfoliation, cuticle grooming, nourishing mask, tension-relief massage, and buff finish.",
+        priceFrom: 450,
+        duration: "40 min",
+      },
+    ],
+  },
+  {
+    id: "bridal-makeovers",
+    title: "Bridal & Occasion Makeover",
+    blurb:
+      "Celebrate your most memorable days with master artistry: long-wear HD makeup, royal bridal hairstyles, and flawless saree draping.",
+    image: photo.bridalUpdo,
+    services: [
+      {
+        slug: "full-bridal-makeover",
+        name: "Signature HD Bridal Makeover",
+        description:
+          "Complete wedding day bridal experience: high-definition water-resistant bridal makeup, royal hair design with fresh flowers/accessories, jewelry setting, lash extension, and bridal saree/lehenga draping.",
+        priceFrom: 9500,
+        duration: "180 min",
+        featured: true,
+        image: photo.bridalUpdo,
+      },
+      {
+        slug: "pre-bridal-radiance-package",
+        name: "Pre-Bridal Radiance & Care Package",
+        description:
+          "Complete pre-wedding grooming spread over 2 sessions: luxury facial, full body D-Tan & waxing, spa manicure & pedicure, and hair spa.",
+        priceFrom: 5500,
+        duration: "240 min",
+      },
+      {
+        slug: "engagement-reception-glam",
+        name: "Engagement & Sangeet Makeover",
+        description:
+          "Contemporary soft-glam or dramatic party look with contouring, premium lashes, and modern textured hairstyling.",
+        priceFrom: 4200,
+        duration: "120 min",
+        image: photo.updo,
+      },
+      {
+        slug: "party-makeup-styling",
+        name: "Occasion & Party Makeup with Hairstyling",
+        description:
+          "Sophisticated makeup and festive hairstyling tailored for wedding guests, family functions, and celebrations.",
+        priceFrom: 1800,
+        duration: "75 min",
+      },
+      {
+        slug: "saree-dupatta-draping",
+        name: "Professional Saree & Dupatta Draping",
+        description:
+          "Perfect Gujarati seedha pallu, ulta pallu, lehenga drape, or modern pre-pleated drape with stay-put pinning.",
+        priceFrom: 400,
         duration: "30 min",
       },
     ],

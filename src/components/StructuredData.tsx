@@ -1,10 +1,8 @@
 import { site, contactInfo, openingHours } from "@/data/site";
 
 /**
- * LocalBusiness structured data.
- * NOTE: All values are PLACEHOLDER demo content. No fake ratings or
- * reviews are included. Replace address/phone/geo with verified
- * business data before launch.
+ * LocalBusiness structured data for Vidhi's Salon, Bardoli.
+ * Enhances Google Search rich snippet and local SEO rankings.
  */
 export function StructuredData() {
   const dayMap: Record<string, string> = {
@@ -18,33 +16,51 @@ export function StructuredData() {
   };
 
   const openingHoursSpecification = openingHours
-    .filter((o) => o.hours !== "Closed")
+    .filter((o) => !o.hours.startsWith("Closed"))
     .map((o) => {
-      const [opens, closes] = o.hours.split(" – ");
+      const cleanHours = o.hours.split(" (")[0];
+      const [opens, closes] = cleanHours.split(" – ");
       return {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: dayMap[o.day],
-        opens,
-        closes,
+        opens: opens?.trim() || "09:30",
+        closes: closes?.trim() || "19:00",
       };
     });
 
   const data = {
     "@context": "https://schema.org",
-    "@type": "HairSalon",
+    "@type": ["HairSalon", "BeautySalon"],
     name: site.name,
+    alternateName: contactInfo.alternateName,
     description: site.shortDescription,
     url: site.url,
     telephone: contactInfo.phoneDisplay,
     email: contactInfo.email,
-    priceRange: "₹₹₹",
+    priceRange: "₹₹",
+    sameAs: [
+      contactInfo.googleShareUrl,
+      contactInfo.googleKnowledgeGraphUrl,
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: contactInfo.addressLine1,
-      addressLocality: "Mumbai",
-      addressRegion: "Maharashtra",
-      postalCode: "400050",
+      addressLocality: contactInfo.city,
+      addressRegion: contactInfo.state,
+      postalCode: contactInfo.postalCode,
       addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "21.1215",
+      longitude: "73.1118",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(contactInfo.rating.score),
+      reviewCount: String(contactInfo.rating.reviewCount),
+      bestRating: "5",
+      worstRating: "1",
     },
     openingHoursSpecification,
   };

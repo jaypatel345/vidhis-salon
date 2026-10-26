@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
-import { site } from "@/data/site";
+import { site, contactInfo } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description:
-    "Sample terms and conditions for the Maison Aurélle website prototype. Editable placeholder content — not legal advice.",
+  description: `Terms and conditions for salon services and appointment bookings at ${site.name} in Bardoli, Gujarat.`,
   alternates: { canonical: "/terms" },
   robots: { index: false, follow: true },
 };
@@ -13,52 +12,50 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <LegalPage
-      eyebrow="Legal"
-      title="Terms & Conditions"
-      updated="Sample date — update before launch"
-      intro={`These sample Terms & Conditions outline the basis on which ${site.name} would provide services and on which this website is made available. Replace with your reviewed terms before launch.`}
+      eyebrow="Terms &amp; Policies"
+      title="Terms &amp; Conditions"
+      updated="October 2026"
+      intro={`These Terms & Conditions outline the guidelines and operational policies for scheduling and receiving services at ${site.name} (${contactInfo.alternateName}) in Bardoli, Gujarat.`}
       sections={[
         {
-          heading: "Appointments and bookings",
+          heading: "Appointments & Confirmations",
           body: [
-            "Appointment requests made through this website are treated as requests, not confirmed bookings. A booking is confirmed only when the salon acknowledges it directly.",
-            "We ask guests to arrive on time. Late arrivals may result in a shortened or rescheduled service so we can honour other guests’ appointments.",
+            "Online appointment requests submitted via this website are treated as booking requests. Your slot is confirmed once our staff verifies availability via WhatsApp or phone call.",
+            "We request guests to arrive promptly at their scheduled time. In case of delay, please inform us in advance so we can adjust our schedule accordingly without causing inconvenience to other clients.",
           ],
         },
         {
-          heading: "Cancellations and rescheduling",
+          heading: "Bridal & Special Occasion Bookings",
           body: [
-            "We request at least 24 hours’ notice to cancel or reschedule. Certain longer services may require a deposit to secure the booking. These are sample terms the salon should confirm.",
+            "Due to high demand during wedding and festive seasons in Bardoli, bridal makeovers, pre-bridal packages, and group styling require an advance token deposit to lock in your date and time.",
+            "Any adjustments to bridal timelines must be communicated at least 7 days before the ceremony.",
           ],
         },
         {
-          heading: "Pricing",
+          heading: "Pricing & Quotations",
           body: [
-            "All prices shown on this website are illustrative starting prices in INR and may change. Final pricing depends on hair length, thickness, product usage, and consultation, and will be confirmed before service.",
+            "All routine prices listed on our menu are standard. Chemical treatments (Keratin smoothing, Hair Botox, Global Color, Balayage) have base starting prices in INR (₹) that may vary depending on hair length, density, and product volume.",
+            "An accurate quote is always communicated during your initial hair inspection before service begins.",
           ],
         },
         {
-          heading: "Services and results",
+          heading: "Allergies & Skin Sensitivities",
           body: [
-            "We take great care with every service, but individual results can vary based on hair condition, history, and home maintenance. We will always give honest guidance on what is achievable.",
+            "Please notify your aesthetician or stylist about any known skin allergies, sensitivities, or ongoing dermatological treatments prior to facial, bleaching, or hair color procedures so we can perform a preliminary patch test.",
           ],
         },
         {
-          heading: "Website use",
+          heading: "Salon Etiquette & Hygiene",
           body: [
-            "This website and its content are provided for general information. Imagery is illustrative and does not document specific client results. Sample business details are placeholders pending the salon’s real information.",
+            "We are committed to maintaining a calm, hygienic, and relaxing environment for all guests. We appreciate your cooperation in keeping our studio serene.",
           ],
         },
         {
-          heading: "Liability",
+          heading: "Contact Information",
           body: [
-            "To the extent permitted by law, this prototype website is provided “as is” without warranties. A live site should include liability terms reviewed by a qualified professional.",
-          ],
-        },
-        {
-          heading: "Contact",
-          body: [
-            `Questions about these sample terms can be directed to ${site.name} via the Contact page.`,
+            `For any questions regarding appointments or our policies, reach out directly to ${site.name}:`,
+            `Address: ${contactInfo.addressLine1}, ${contactInfo.addressLine2}`,
+            `Phone: ${contactInfo.phoneDisplay} | WhatsApp: +91 99251 72388`,
           ],
         },
       ]}
