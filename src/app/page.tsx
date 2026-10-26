@@ -62,9 +62,9 @@ const transformationImages = [
   { k: photo.salonInteriorReal, alt: "Vidhi's Salon Studio Interior & Styling Chairs (Original Google Photo)" },
   { k: photo.heroBridal, alt: "Signature Bridal Makeover (Original Google Photo)", tall: true },
   { k: photo.stylingStationsReal, alt: "Mirror Styling Stations & Lighting (Original Google Photo)" },
-  { k: photo.treatmentAreaReal, alt: "Hair Care & Treatment Area (Original Google Photo)" },
-  { k: photo.balayage, alt: "Silky hair smoothing and balayage result", tall: true },
-  { k: photo.glossyWaves, alt: "Keratin protein smoothing gloss" },
+  { k: photo.treatmentAreaReal, alt: "Hair Care & Scalp Spa Station (Original Google Photo)" },
+  { k: photo.bridalStylingReal, alt: "Traditional Gujarati Bridal Styling & Makeover (Original Google Photo)", tall: true },
+  { k: photo.lorealDisplayReal, alt: "L'Oréal Professionnel Partner Salon Retail Display" },
 ];
 
 const instagramImages = [
@@ -72,8 +72,8 @@ const instagramImages = [
   photo.heroBridal,
   photo.stylingStationsReal,
   photo.treatmentAreaReal,
-  photo.glossyWaves,
-  photo.updo,
+  photo.bridalStylingReal,
+  photo.lorealDisplayReal,
 ];
 
 export default function HomePage() {
@@ -375,7 +375,7 @@ export default function HomePage() {
               Meet everyone
             </Button>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {stylists.map((s, i) => (
               <Reveal key={s.slug} delay={i * 60}>
                 <Link href="/stylists" className="group block">
@@ -384,7 +384,7 @@ export default function HomePage() {
                       src={unsplash(s.image, { w: 600 })}
                       alt={`Portrait of ${s.name}`}
                       fill
-                      sizes="(max-width:640px) 100vw, 25vw"
+                      sizes="(max-width:640px) 100vw, 33vw"
                       className="object-cover"
                     />
                   </div>
@@ -592,7 +592,7 @@ export default function HomePage() {
 
       {/* 12 — FINAL CTA */}
       <CTASection
-        image={photo.heroStyled}
+        image={photo.salonInteriorReal}
         eyebrow="Book Your Visit"
         title="Experience the art of personalized beauty"
         description="Book your appointment today or message us on WhatsApp. We look forward to welcoming you at Vidhi's Salon on Lal Bahadur Shastri Road, Bardoli."

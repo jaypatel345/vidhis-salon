@@ -47,7 +47,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Consultation-led haircut, soothing hair wash, blow-dry, and signature styling to flatter your facial structure.",
         priceFrom: 350,
         duration: "45 min",
-        image: photo.salonInteriorReal,
+        image: photo.stylingStationsReal,
         featured: true,
       },
       {
@@ -57,7 +57,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Multi-layered graduation and texturing for voluminous movement, healthy bounce, and effortless styling.",
         priceFrom: 550,
         duration: "60 min",
-        image: photo.womanProfile,
         featured: true,
       },
       {
@@ -67,7 +66,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Hydrating wash, heat defense prep, and glossy bouncy blowout or sleek flat-iron finish for any special outing.",
         priceFrom: 450,
         duration: "45 min",
-        image: photo.blowoutMotion,
       },
       {
         slug: "split-ends-trimming",
@@ -84,7 +82,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Clean clipper and scissor fade, sideburn shaping, and styled finish with premium grooming products.",
         priceFrom: 200,
         duration: "30 min",
-        image: photo.menCut,
       },
       {
         slug: "kids-haircut",
@@ -101,7 +98,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Color & Hair Treatments",
     blurb:
       "Transformative hair therapies using leading professional brands (L'Oréal, Matrix, Schwarzkopf) for silky, healthy, radiant hair.",
-    image: photo.treatmentAreaReal,
+    image: photo.lorealDisplayReal,
     services: [
       {
         slug: "keratin-smoothing",
@@ -111,7 +108,7 @@ export const serviceCategories: ServiceCategory[] = [
         priceFrom: 3500,
         duration: "180 min",
         featured: true,
-        image: photo.glossyWaves,
+        image: photo.treatmentAreaReal,
       },
       {
         slug: "hair-botox-nourishing",
@@ -120,7 +117,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Anti-aging deep conditioner that reconstructs damaged hair fibres, restores natural elasticity, and revitalizes chemically treated hair.",
         priceFrom: 3800,
         duration: "150 min",
-        image: photo.treatmentCare,
       },
       {
         slug: "loreal-hair-spa",
@@ -139,7 +135,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Rich, uniform color coverage from roots to tips with nourishing conditioning oils for radiant shine and grey coverage.",
         priceFrom: 2200,
         duration: "120 min",
-        image: photo.copperColor,
       },
       {
         slug: "balayage-highlights",
@@ -148,7 +143,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Seamless hand-painted streaks and sun-kissed ombre ribbons for rich dimension, personalized to your skin tone.",
         priceFrom: 2800,
         duration: "180 min",
-        image: photo.balayage,
       },
       {
         slug: "root-touchup",
@@ -157,7 +151,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Fast, 100% grey coverage matched seamlessly to your existing hair color with gentle scalp protection.",
         priceFrom: 900,
         duration: "60 min",
-        image: photo.brunetteGloss,
       },
     ],
   },
@@ -166,7 +159,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Facials & Skin Care",
     blurb:
       "Clinical and herbal skin therapies designed to revitalize dull skin, remove sun tan, and unlock youthful, luminous radiance.",
-    image: photo.stylingStationsReal,
+    image: photo.treatmentAreaReal,
     services: [
       {
         slug: "bridal-glow-facial",
@@ -176,7 +169,7 @@ export const serviceCategories: ServiceCategory[] = [
         priceFrom: 2500,
         duration: "90 min",
         featured: true,
-        image: photo.smilingWoman,
+        image: photo.bridalStylingReal,
       },
       {
         slug: "o3-luxury-facial",
@@ -185,7 +178,6 @@ export const serviceCategories: ServiceCategory[] = [
           "Premium brightening treatment that evens skin tone, reduces pigmentation, and delivers an instant luminous glass-skin finish.",
         priceFrom: 1800,
         duration: "75 min",
-        image: photo.portraitRed,
       },
       {
         slug: "herbal-fruit-facial",

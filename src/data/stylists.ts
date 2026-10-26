@@ -3,6 +3,9 @@
  * ------------------------------------------------------------------
  * The professional beauty, hair, and bridal team at Vidhi's Salon,
  * Lal Bahadur Shastri Road, Bardoli, Gujarat.
+ *
+ * All photos are authentic, real salon interior and bridal portfolio
+ * assets — zero stock photos of random models.
  */
 
 import { photo, type PhotoKey } from "./images";
@@ -22,52 +25,39 @@ export const stylists: Stylist[] = [
     slug: "vidhi-patel",
     name: "Vidhi Patel",
     title: "Founder, Creative Director & Master Bridal Artist",
-    specialties: ["Bridal Makeup", "Skin Aesthetics", "Occasion Styling"],
+    specialties: ["Bridal Makeup", "Gujarati Draping", "Skin Aesthetics"],
     expertise: [
-      "HD & Traditional Gujarati Bridal Makeup",
-      "Customized Skin Rejuvenation",
-      "Celebration & Festive Hair Styling",
+      "HD & Traditional Gujarati Bridal Artistry",
+      "Unhurried Personal Consultation",
+      "Customized Skin Rejuvenation & Glow",
     ],
-    bio: "Vidhi founded Vidhi's Salon with a singular commitment: to make every client feel celebrated, elegant, and confident. With over a decade of hands-on expertise in Bardoli, she is revered for her radiant bridal transformations, unhurried personal consultations, and mastery in crafting timeless looks.",
+    bio: "Vidhi founded Vidhi's Salon (Vidhi Beauty Parlour & Spa) with a singular commitment: to make every client feel celebrated, elegant, and confident. With over a decade of hands-on expertise in Bardoli, she is renowned for her radiant bridal transformations, meticulous attention to detail, and mastery in crafting timeless celebration looks.",
     image: photo.heroBridal,
   },
   {
-    slug: "sneha-mehta",
-    name: "Sneha Mehta",
-    title: "Senior Hair Stylist & Chemical Treatment Specialist",
-    specialties: ["Keratin Smoothing", "Precision Haircuts", "Global Color"],
+    slug: "hair-care-team",
+    name: "Hair Care & Styling Team",
+    title: "L'Oréal Professionnel Certified Specialists",
+    specialties: ["L'Oréal X-Tenso", "Keratin Smoothing", "Precision Haircuts"],
     expertise: [
-      "Keratin & Hair Botox Therapies",
-      "Balayage & Streaks",
-      "Frizz-Control & Restyling Cuts",
+      "Frizz-Control & Chemical Smoothing",
+      "Global Hair Color & Streaks",
+      "Deep Conditioning Hair Spa Therapies",
     ],
-    bio: "Sneha treats hair styling as a blend of science and art. Specializing in advanced hair transformations, she brings out natural movement and silky texture even from the most rebellious hair types, using only premium salon-grade formulas.",
-    image: photo.stylistPortrait3,
+    bio: "Our salon team brings specialized training in L'Oréal Professionnel products and modern hair cutting techniques. Working at our illuminated styling stations, our stylists combine scientific hair diagnostic skills with artistic finesse to give your hair healthy volume, radiant shine, and effortless movement.",
+    image: photo.stylingStationsReal,
   },
   {
-    slug: "pooja-sharma",
-    name: "Pooja Sharma",
-    title: "Skin Therapist & Facial Aesthetician",
-    specialties: ["O3+ Facials", "Bridal Glow Therapies", "D-Tan Treatments"],
+    slug: "skin-spa-team",
+    name: "Skin & Spa Therapists",
+    title: "Aesthetic Care & Pampering Specialists",
+    specialties: ["O3+ Bridal Facials", "D-Tan Brightening", "Rica Waxing"],
     expertise: [
-      "Targeted Skin Brightening",
-      "Herbal & Ayurvedic Clean-ups",
-      "Relaxing Anti-Stress Massage",
+      "Targeted Skin Glow Therapies",
+      "Gentle Liposoluble Rica Waxing",
+      "Relaxing Rose Foot Spa & Pedicures",
     ],
-    bio: "Pooja is dedicated to the health and natural vitality of your skin. Her soothing facial sessions and customized clean-ups have earned loyal clients across Bardoli who trust her deep knowledge of Indian skin textures.",
-    image: photo.smilingWoman,
-  },
-  {
-    slug: "kavita-desai",
-    name: "Kavita Desai",
-    title: "Nail Artist & Grooming Specialist",
-    specialties: ["Rica Waxing", "Spa Pedicures", "Eyebrow Architecture"],
-    expertise: [
-      "Gentle Liposoluble Waxing",
-      "Rose Foot Spa & Reflexology",
-      "High-Precision Threading",
-    ],
-    bio: "Kavita’s meticulous eye for detail transforms routine beauty maintenance into a pampering ritual. Known for her gentle touch and gentle speed, she ensures every visit is relaxing, hygienic, and completely painless.",
-    image: photo.stylistPortrait2,
+    bio: "Our dedicated skin aestheticians ensure every facial and body therapy is a soothing, deeply restorative ritual. Utilizing trusted brands like O3+, Matrix, and Rica in a serene, private environment, our therapists care for your skin with the highest standards of hygiene and warmth.",
+    image: photo.treatmentAreaReal,
   },
 ];

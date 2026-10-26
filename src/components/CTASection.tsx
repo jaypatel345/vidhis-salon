@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import { unsplash, photo, type PhotoKey } from "@/data/images";
 
 export function CTASection({
-  image = photo.heroStyled,
+  image = photo.salonInteriorReal,
   eyebrow = "Begin",
   title = "Your chair is waiting",
   description = "Book a consultation and let’s design a look that feels unmistakably you.",

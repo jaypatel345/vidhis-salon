@@ -95,7 +95,11 @@ export default function StylistsPage() {
                     </div>
 
                     <div className="mt-8 flex flex-wrap items-center gap-4">
-                      <Button href="/booking">Book with {s.name.split(" ")[0]}</Button>
+                      <Button href="/booking">
+                        {s.slug === "vidhi-patel"
+                          ? "Book with Vidhi"
+                          : "Book Appointment"}
+                      </Button>
                       <a
                         href={`https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(
                           `Hello Vidhi's Salon, I would like to book a consultation with ${s.name}.`

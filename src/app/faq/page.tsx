@@ -43,7 +43,7 @@ export default function FAQPage() {
       </Section>
 
       <CTASection
-        image={photo.brunetteGloss}
+        image={photo.stylingStationsReal}
         eyebrow="Have another question?"
         title="We’re always here to assist"
         description="Feel free to call or WhatsApp us anytime during business hours."

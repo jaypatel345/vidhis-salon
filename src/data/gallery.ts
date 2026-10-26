@@ -11,9 +11,8 @@ import { photo, type PhotoKey } from "./images";
 export type GalleryCategory =
   | "Interiors"
   | "Bridal"
-  | "Haircuts"
   | "Treatments"
-  | "Color";
+  | "Artistry";
 
 export type GalleryItem = {
   image: PhotoKey;
@@ -27,9 +26,8 @@ export type GalleryItem = {
 export const galleryCategories: GalleryCategory[] = [
   "Interiors",
   "Bridal",
-  "Haircuts",
   "Treatments",
-  "Color",
+  "Artistry",
 ];
 
 export const galleryItems: GalleryItem[] = [
@@ -55,49 +53,26 @@ export const galleryItems: GalleryItem[] = [
   {
     image: photo.treatmentAreaReal,
     category: "Treatments",
-    alt: "Vidhi's Salon — Hair Treatment & Care Station (Original Google Photo)",
+    alt: "Vidhi's Salon — Hair Treatment & Reclining Spa Station (Original Google Photo)",
     isOriginal: true,
   },
   {
-    image: photo.balayage,
-    category: "Color",
-    alt: "Sun-kissed Balayage & Highlights",
-  },
-  {
-    image: photo.longWaves,
-    category: "Haircuts",
-    alt: "Precision Layered Haircut with Natural Volume",
-    tall: true,
-  },
-  {
-    image: photo.glossyWaves,
-    category: "Treatments",
-    alt: "Keratin Protein Smoothing & Gloss Finish",
-  },
-  {
-    image: photo.updo,
+    image: photo.bridalStylingReal,
     category: "Bridal",
-    alt: "Festive Occasion Updo & Hair Styling",
-  },
-  {
-    image: photo.copperColor,
-    category: "Color",
-    alt: "Rich Ammonia-Free Global Hair Color",
-  },
-  {
-    image: photo.womanProfile,
-    category: "Haircuts",
-    alt: "Custom Hair Feathering & Restyle Cut",
+    alt: "Vidhi's Salon — Traditional Gujarati Bridal Styling & Draping (Original Google Photo)",
+    isOriginal: true,
     tall: true,
   },
   {
-    image: photo.curlTexture,
-    category: "Haircuts",
-    alt: "Defined Natural Curls & Texture Treatment",
+    image: photo.lorealDisplayReal,
+    category: "Treatments",
+    alt: "Vidhi's Salon — L'Oréal Professionnel Partner Salon Product Display",
+    isOriginal: true,
   },
   {
-    image: photo.blondeHighlights,
-    category: "Color",
-    alt: "Luminous Streaks & Blonde Highlights",
+    image: photo.bridalDetailReal,
+    category: "Artistry",
+    alt: "Vidhi's Salon — Bridal Eye Makeup & Traditional Adornments (Original Google Photo)",
+    isOriginal: true,
   },
 ];
