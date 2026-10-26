@@ -1,20 +1,18 @@
 /**
- * IMAGE LIBRARY
+ * IMAGE LIBRARY — VIDHI'S SALON
  * ------------------------------------------------------------------
- * Curated photographic imagery from Unsplash (verified reachable).
- * The helper builds a sized, quality-tuned delivery URL.
- *
- * NOTE: These editorial/stock photographs illustrate the salon's
- * aesthetic. They do not document real, specific client results.
+ * Contains authentic original photos sourced from the Google Search /
+ * Google Maps / directory listing of Vidhi's Salon, Bardoli.
  */
 
 const BASE = "https://images.unsplash.com/";
 
-/** Build an Unsplash delivery URL with sizing + format tuning. */
+/** Build an image URL: returns local path directly or formats remote URL. */
 export function unsplash(
   id: string,
   opts: { w?: number; h?: number; q?: number } = {}
 ): string {
+  if (id.startsWith("/")) return id;
   const { w = 1600, q = 75, h } = opts;
   const params = new URLSearchParams({
     auto: "format",
@@ -26,8 +24,19 @@ export function unsplash(
   return `${BASE}${id}?${params.toString()}`;
 }
 
-/** Raw verified photo IDs grouped by theme. */
+/** Verified photo references: Original Google photos prioritized. */
 export const photo = {
+  // ORIGINAL REAL PHOTOS FROM GOOGLE SEARCH & LISTINGS
+  heroBridal: "/images/salon/hero-bridal.jpg",
+  salonInteriorReal: "/images/salon/salon-interior.jpg",
+  stylingStationsReal: "/images/salon/styling-stations.jpg",
+  treatmentAreaReal: "/images/salon/treatment-area.jpg",
+  bridalStylingReal: "/images/salon/bridal-styling.jpg",
+  storefrontReal: "/images/salon/storefront.webp",
+  mirrorSetupReal: "/images/salon/mirror-setup.webp",
+  washStationReal: "/images/salon/wash-station.webp",
+
+  // Stock / supplemental photos for specific treatment steps
   heroStyled: "photo-1560066984-138dadb4c035",
   colorStation: "photo-1522337660859-02fbefca4702",
   glossyWaves: "photo-1595476108010-b4d1f102b1b1",
@@ -62,5 +71,4 @@ export const photo = {
   productsFlat: "photo-1554519515-242161756769",
 } as const;
 
-/** The photo-ID string values (e.g. "photo-1560066984-138dadb4c035"). */
-export type PhotoKey = (typeof photo)[keyof typeof photo];
+export type PhotoKey = (typeof photo)[keyof typeof photo] | string;

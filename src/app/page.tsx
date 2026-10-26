@@ -59,21 +59,21 @@ const serviceIcons: Record<string, typeof Scissors> = {
 };
 
 const transformationImages = [
-  { k: photo.balayage, alt: "Silky hair smoothing and balayage result", tall: true },
-  { k: photo.copperColor, alt: "Rich ammonia-free hair color" },
-  { k: photo.bridalUpdo, alt: "Royal bridal hairstyle with fresh floral adornment" },
-  { k: photo.glossyWaves, alt: "Keratin protein smoothing gloss" },
-  { k: photo.brunetteGloss, alt: "Healthy, nourished hair finish", tall: true },
-  { k: photo.smilingWoman, alt: "Luminous bridal glow facial result" },
+  { k: photo.heroBridal, alt: "Signature Bridal Makeover (Original Google Photo)", tall: true },
+  { k: photo.salonInteriorReal, alt: "Vidhi's Salon Studio Interior (Original Google Photo)" },
+  { k: photo.bridalStylingReal, alt: "Royal Bridal Hairstyle & Draping (Original Google Photo)" },
+  { k: photo.treatmentAreaReal, alt: "Hair Care & Treatment Area (Original Google Photo)" },
+  { k: photo.storefrontReal, alt: "Salon Floor & Styling Chairs (Original Listing Photo)", tall: true },
+  { k: photo.mirrorSetupReal, alt: "Mirror Styling Section (Original Listing Photo)" },
 ];
 
 const instagramImages = [
-  photo.womanProfile,
-  photo.bridalUpdo,
-  photo.updo,
-  photo.blowoutMotion,
-  photo.smilingWoman,
-  photo.glossyWaves,
+  photo.heroBridal,
+  photo.salonInteriorReal,
+  photo.bridalStylingReal,
+  photo.stylingStationsReal,
+  photo.treatmentAreaReal,
+  photo.storefrontReal,
 ];
 
 export default function HomePage() {
@@ -83,12 +83,12 @@ export default function HomePage() {
       <section className="relative isolate min-h-[90svh] overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <SmartImage
-            src={unsplash(photo.heroStyled, { w: 2200, q: 75 })}
-            alt="Vidhi's Salon — Hair, Beauty & Bridal Studio in Bardoli"
+            src={unsplash(photo.heroBridal, { w: 2200, q: 80 })}
+            alt="Vidhi's Salon — Signature Bridal Makeover from Google Listing"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[center_25%]"
+            className="object-cover object-[center_30%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-espresso/85 via-espresso/55 to-espresso/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 to-transparent" />
@@ -163,8 +163,8 @@ export default function HomePage() {
               <div className="grid grid-cols-5 gap-4">
                 <div className="img-zoom col-span-3 overflow-hidden shadow-sm">
                   <SmartImage
-                    src={unsplash(photo.stylistWorking, { w: 900 })}
-                    alt="Stylist working with client at Vidhi's Salon"
+                    src={unsplash(photo.salonInteriorReal, { w: 900 })}
+                    alt="Original studio interior of Vidhi's Salon, Bardoli"
                     width={900}
                     height={1150}
                     className="h-full w-full object-cover"
@@ -172,8 +172,8 @@ export default function HomePage() {
                 </div>
                 <div className="img-zoom col-span-2 mt-12 overflow-hidden shadow-sm">
                   <SmartImage
-                    src={unsplash(photo.productShelf, { w: 600 })}
-                    alt="Professional hair care products at Vidhi's Salon Bardoli"
+                    src={unsplash(photo.stylingStationsReal, { w: 600 })}
+                    alt="Original styling stations at Vidhi's Salon, Bardoli"
                     width={600}
                     height={800}
                     className="h-full w-full object-cover"
@@ -468,8 +468,8 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 lg:col-span-6">
               <div className="img-zoom overflow-hidden shadow-md">
                 <SmartImage
-                  src={unsplash(photo.salonInterior, { w: 1100 })}
-                  alt="Interior of Vidhi's Salon, Bardoli"
+                  src={unsplash(photo.treatmentAreaReal, { w: 1100 })}
+                  alt="Original interior of Vidhi's Salon treatment area, Bardoli"
                   width={1100}
                   height={820}
                   className="h-full w-full object-cover"

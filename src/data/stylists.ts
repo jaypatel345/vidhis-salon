@@ -29,7 +29,7 @@ export const stylists: Stylist[] = [
       "Celebration & Festive Hair Styling",
     ],
     bio: "Vidhi founded Vidhi's Salon with a singular commitment: to make every client feel celebrated, elegant, and confident. With over a decade of hands-on expertise in Bardoli, she is revered for her radiant bridal transformations, unhurried personal consultations, and mastery in crafting timeless looks.",
-    image: photo.stylistPortrait1,
+    image: photo.heroBridal,
   },
   {
     slug: "sneha-mehta",

@@ -30,8 +30,8 @@ export default function ServicesPage() {
       <section className="relative isolate overflow-hidden bg-espresso">
         <div className="absolute inset-0 -z-10 opacity-40">
           <SmartImage
-            src={unsplash(photo.colorStation, { w: 2000, q: 70 })}
-            alt="Vidhi's Salon styling and treatment station"
+            src={unsplash(photo.salonInteriorReal, { w: 2000, q: 70 })}
+            alt="Vidhi's Salon styling and treatment station (Original Google Photo)"
             fill
             sizes="100vw"
             className="object-cover"
@@ -178,7 +178,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <CTASection
-        image={photo.colorStation}
+        image={photo.treatmentAreaReal}
         eyebrow="Ready to visit?"
         title="Reserve your chair in Bardoli"
         description="Book online or contact us directly on WhatsApp / Phone."

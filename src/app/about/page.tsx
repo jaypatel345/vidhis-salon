@@ -67,8 +67,8 @@ export default function AboutPage() {
       <section className="relative isolate min-h-[65svh] overflow-hidden bg-espresso">
         <div className="absolute inset-0 -z-10">
           <SmartImage
-            src={unsplash(photo.interiorWarm, { w: 2000, q: 72 })}
-            alt="Warm, inviting interior of Vidhi's Salon, Bardoli"
+            src={unsplash(photo.salonInteriorReal, { w: 2000, q: 72 })}
+            alt="Warm, inviting interior of Vidhi's Salon, Bardoli (Original Google Photo)"
             fill
             priority
             sizes="100vw"
@@ -161,8 +161,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5">
               <div className="img-zoom overflow-hidden shadow-md">
                 <SmartImage
-                  src={unsplash(photo.cutting, { w: 800 })}
-                  alt="Precision styling at Vidhi's Salon, Bardoli"
+                  src={unsplash(photo.storefrontReal, { w: 800 })}
+                  alt="Original storefront and styling section at Vidhi's Salon, Bardoli"
                   width={800}
                   height={1000}
                   className="h-full w-full object-cover"
@@ -219,7 +219,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <CTASection
-        image={photo.colorStation}
+        image={photo.heroBridal}
         eyebrow="Visit Vidhi’s Salon"
         title="We’d love to welcome you"
         description="Book your hair, skin, or bridal consultation today. Call or WhatsApp +91 99251 72388."

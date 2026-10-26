@@ -19,9 +19,9 @@ export default function GalleryPage() {
         <Container>
           <SectionHeading
             as="h1"
-            eyebrow="Portfolio"
+            eyebrow="Portfolio &amp; Studio Photos"
             title="The Salon Gallery"
-            description={`Explore our craft across hair transformations, royal bridal styling, restorative hair treatments, and the warm atmosphere of our studio at ${site.name}, Lal Bahadur Shastri Road, Bardoli.`}
+            description={`Explore our authentic studio photos from our Google profile alongside client transformations across royal bridal styling, restorative hair smoothing treatments, and the warm atmosphere of our studio at ${site.name}, Lal Bahadur Shastri Road, Bardoli.`}
           />
         </Container>
       </Section>
@@ -33,7 +33,7 @@ export default function GalleryPage() {
       </Section>
 
       <CTASection
-        image={photo.glossyWaves}
+        image={photo.heroBridal}
         eyebrow="Ready for your transformation?"
         title="Let’s create your signature look"
         description="Book your appointment today at Vidhi's Salon on Lal Bahadur Shastri Road, Bardoli."

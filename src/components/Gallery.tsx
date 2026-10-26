@@ -103,6 +103,11 @@ export function Gallery() {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="h-auto w-full object-cover"
             />
+            {item.isOriginal && (
+              <span className="pointer-events-none absolute top-3 left-3 rounded-full bg-espresso/85 px-2.5 py-0.5 text-[0.62rem] font-semibold tracking-wider text-champagne border border-champagne/40 backdrop-blur-sm">
+                ⭐ Original Photo
+              </span>
+            )}
             <span className="pointer-events-none absolute inset-0 bg-espresso/0 transition-colors duration-500 group-hover:bg-espresso/20" />
             <span className="pointer-events-none absolute bottom-3 left-3 translate-y-2 rounded-full bg-ivory/95 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.14em] text-espresso opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
               {item.category}

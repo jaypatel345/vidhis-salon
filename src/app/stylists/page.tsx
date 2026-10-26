@@ -117,7 +117,7 @@ export default function StylistsPage() {
 
       {/* CTA */}
       <CTASection
-        image={photo.womanProfile}
+        image={photo.bridalStylingReal}
         eyebrow="Consultation"
         title="Find the right artist for your look"
         description="Not sure which specialist is best for your hair or bridal requirements? Reach out to us directly for personalized guidance."

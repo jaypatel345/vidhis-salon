@@ -38,7 +38,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Haircuts & Styling",
     blurb:
       "Precision cuts, feathering, blowouts, and custom styling tailored to your face shape, hair texture, and daily lifestyle.",
-    image: photo.cutting,
+    image: photo.stylingStationsReal,
     services: [
       {
         slug: "womens-haircut-styling",
@@ -47,7 +47,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Consultation-led haircut, soothing hair wash, blow-dry, and signature styling to flatter your facial structure.",
         priceFrom: 350,
         duration: "45 min",
-        image: photo.longWaves,
+        image: photo.salonInteriorReal,
         featured: true,
       },
       {
@@ -101,7 +101,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Color & Hair Treatments",
     blurb:
       "Transformative hair therapies using leading professional brands (L'Oréal, Matrix, Schwarzkopf) for silky, healthy, radiant hair.",
-    image: photo.colorStation,
+    image: photo.treatmentAreaReal,
     services: [
       {
         slug: "keratin-smoothing",
@@ -130,7 +130,7 @@ export const serviceCategories: ServiceCategory[] = [
         priceFrom: 850,
         duration: "60 min",
         featured: true,
-        image: photo.washStation,
+        image: photo.washStationReal,
       },
       {
         slug: "global-hair-color",
@@ -166,7 +166,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Facials & Skin Care",
     blurb:
       "Clinical and herbal skin therapies designed to revitalize dull skin, remove sun tan, and unlock youthful, luminous radiance.",
-    image: photo.smilingWoman,
+    image: photo.mirrorSetupReal,
     services: [
       {
         slug: "bridal-glow-facial",
@@ -226,7 +226,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Grooming & Body Care",
     blurb:
       "Impeccable hygiene, gentle waxing formulations, detailed threading, and pampering hand & foot spa rituals.",
-    image: photo.mirrorStation,
+    image: photo.storefrontReal,
     services: [
       {
         slug: "rica-liposoluble-waxing",
@@ -276,7 +276,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Bridal & Occasion Makeover",
     blurb:
       "Celebrate your most memorable days with master artistry: long-wear HD makeup, royal bridal hairstyles, and flawless saree draping.",
-    image: photo.bridalUpdo,
+    image: photo.heroBridal,
     services: [
       {
         slug: "full-bridal-makeover",
@@ -286,7 +286,7 @@ export const serviceCategories: ServiceCategory[] = [
         priceFrom: 9500,
         duration: "180 min",
         featured: true,
-        image: photo.bridalUpdo,
+        image: photo.heroBridal,
       },
       {
         slug: "pre-bridal-radiance-package",
@@ -303,7 +303,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Contemporary soft-glam or dramatic party look with contouring, premium lashes, and modern textured hairstyling.",
         priceFrom: 4200,
         duration: "120 min",
-        image: photo.updo,
+        image: photo.bridalStylingReal,
       },
       {
         slug: "party-makeup-styling",
