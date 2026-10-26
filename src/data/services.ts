@@ -130,7 +130,7 @@ export const serviceCategories: ServiceCategory[] = [
         priceFrom: 850,
         duration: "60 min",
         featured: true,
-        image: photo.washStationReal,
+        image: photo.treatmentAreaReal,
       },
       {
         slug: "global-hair-color",
@@ -166,7 +166,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Facials & Skin Care",
     blurb:
       "Clinical and herbal skin therapies designed to revitalize dull skin, remove sun tan, and unlock youthful, luminous radiance.",
-    image: photo.mirrorSetupReal,
+    image: photo.stylingStationsReal,
     services: [
       {
         slug: "bridal-glow-facial",
@@ -226,7 +226,7 @@ export const serviceCategories: ServiceCategory[] = [
     title: "Grooming & Body Care",
     blurb:
       "Impeccable hygiene, gentle waxing formulations, detailed threading, and pampering hand & foot spa rituals.",
-    image: photo.storefrontReal,
+    image: photo.salonInteriorReal,
     services: [
       {
         slug: "rica-liposoluble-waxing",
@@ -303,7 +303,7 @@ export const serviceCategories: ServiceCategory[] = [
           "Contemporary soft-glam or dramatic party look with contouring, premium lashes, and modern textured hairstyling.",
         priceFrom: 4200,
         duration: "120 min",
-        image: photo.bridalStylingReal,
+        image: photo.heroBridal,
       },
       {
         slug: "party-makeup-styling",

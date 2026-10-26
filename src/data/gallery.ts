@@ -3,6 +3,7 @@
  * ------------------------------------------------------------------
  * Contains authentic original photos from Vidhi's Salon, Bardoli
  * (Google Maps / Knowledge Graph listing) alongside client transformations.
+ * Every photo is unique with zero duplicates.
  */
 
 import { photo, type PhotoKey } from "./images";
@@ -33,22 +34,15 @@ export const galleryCategories: GalleryCategory[] = [
 
 export const galleryItems: GalleryItem[] = [
   {
-    image: photo.heroBridal,
-    category: "Bridal",
-    alt: "Vidhi's Salon — Signature Bridal Makeover (Original Google Photo)",
-    isOriginal: true,
-    tall: true,
-  },
-  {
     image: photo.salonInteriorReal,
     category: "Interiors",
     alt: "Vidhi's Salon — Studio Interior & Styling Chairs (Original Google Photo)",
     isOriginal: true,
   },
   {
-    image: photo.bridalStylingReal,
+    image: photo.heroBridal,
     category: "Bridal",
-    alt: "Vidhi's Salon — Royal Bridal Hairstyle & Draping (Original Google Photo)",
+    alt: "Vidhi's Salon — Signature Bridal Makeover (Original Google Photo)",
     isOriginal: true,
     tall: true,
   },
@@ -62,24 +56,6 @@ export const galleryItems: GalleryItem[] = [
     image: photo.treatmentAreaReal,
     category: "Treatments",
     alt: "Vidhi's Salon — Hair Treatment & Care Station (Original Google Photo)",
-    isOriginal: true,
-  },
-  {
-    image: photo.storefrontReal,
-    category: "Interiors",
-    alt: "Vidhi's Salon — Entrance & Salon Floor (Original Listing Photo)",
-    isOriginal: true,
-  },
-  {
-    image: photo.mirrorSetupReal,
-    category: "Interiors",
-    alt: "Vidhi's Salon — Makeup & Styling Section (Original Listing Photo)",
-    isOriginal: true,
-  },
-  {
-    image: photo.washStationReal,
-    category: "Treatments",
-    alt: "Vidhi's Salon — Reclining Hair Wash Station (Original Listing Photo)",
     isOriginal: true,
   },
   {
@@ -113,5 +89,15 @@ export const galleryItems: GalleryItem[] = [
     category: "Haircuts",
     alt: "Custom Hair Feathering & Restyle Cut",
     tall: true,
+  },
+  {
+    image: photo.curlTexture,
+    category: "Haircuts",
+    alt: "Defined Natural Curls & Texture Treatment",
+  },
+  {
+    image: photo.blondeHighlights,
+    category: "Color",
+    alt: "Luminous Streaks & Blonde Highlights",
   },
 ];

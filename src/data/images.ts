@@ -26,15 +26,11 @@ export function unsplash(
 
 /** Verified photo references: Original Google photos prioritized. */
 export const photo = {
-  // ORIGINAL REAL PHOTOS FROM GOOGLE SEARCH & LISTINGS
-  heroBridal: "/images/salon/hero-bridal.jpg",
+  // ORIGINAL UNIQUE REAL PHOTOS FROM GOOGLE LISTING
   salonInteriorReal: "/images/salon/salon-interior.jpg",
   stylingStationsReal: "/images/salon/styling-stations.jpg",
   treatmentAreaReal: "/images/salon/treatment-area.jpg",
-  bridalStylingReal: "/images/salon/bridal-styling.jpg",
-  storefrontReal: "/images/salon/storefront.webp",
-  mirrorSetupReal: "/images/salon/mirror-setup.webp",
-  washStationReal: "/images/salon/wash-station.webp",
+  heroBridal: "/images/salon/hero-bridal.jpg",
 
   // Stock / supplemental photos for specific treatment steps
   heroStyled: "photo-1560066984-138dadb4c035",

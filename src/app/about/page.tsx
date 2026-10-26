@@ -161,8 +161,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5">
               <div className="img-zoom overflow-hidden shadow-md">
                 <SmartImage
-                  src={unsplash(photo.storefrontReal, { w: 800 })}
-                  alt="Original storefront and styling section at Vidhi's Salon, Bardoli"
+                  src={unsplash(photo.stylingStationsReal, { w: 800 })}
+                  alt="Original styling stations at Vidhi's Salon, Bardoli"
                   width={800}
                   height={1000}
                   className="h-full w-full object-cover"
