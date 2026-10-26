@@ -134,7 +134,18 @@ export default function ContactPage() {
                       View on Google <ExternalLink size={12} />
                     </a>
                   </div>
-                  <p className="text-stone leading-relaxed">
+                  <div className="flex items-center justify-between pt-1 border-t border-espresso/10">
+                    <span className="font-semibold text-espresso">Instagram Account:</span>
+                    <a
+                      href={contactInfo.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-bronze font-medium underline inline-flex items-center gap-1"
+                    >
+                      {contactInfo.instagramHandle} <ExternalLink size={12} />
+                    </a>
+                  </div>
+                  <p className="text-stone leading-relaxed pt-1">
                     Search for <em>Vidhi&apos;s Salon</em> or <em>Vidhi Beauty Parlour Bardoli</em> to read all client reviews, view photos, and see live local updates.
                   </p>
                 </div>

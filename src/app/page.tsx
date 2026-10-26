@@ -20,6 +20,7 @@ import { SmartImage } from "@/components/SmartImage";
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { ReelsSection } from "@/components/ReelsSection";
 import { unsplash, photo } from "@/data/images";
 import { featuredServices, inr } from "@/data/services";
 import { stylists } from "@/data/stylists";
@@ -527,12 +528,15 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 10 — INSTAGRAM / GALLERY SHOWCASE */}
+      {/* 10 — VIDEO OF INSTAGRAM REELS */}
+      <ReelsSection />
+
+      {/* 11 — STUDIO PHOTOGRAPHY SHOWCASE */}
       <Section>
         <Container>
           <SectionHeading
             align="center"
-            eyebrow="@vidhisalon.bardoli"
+            eyebrow={contactInfo.instagramHandle}
             title="Artistry from our studio"
             description="Follow along for bridal inspiration, before-and-after smoothing results, and everyday glam."
           />
@@ -540,11 +544,11 @@ export default function HomePage() {
             {instagramImages.map((img, i) => (
               <a
                 key={i}
-                href={contactInfo.googleShareUrl}
+                href={contactInfo.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="img-zoom group relative aspect-square overflow-hidden bg-cream"
-                aria-label="View on Google Search"
+                aria-label="View on Instagram"
               >
                 <SmartImage
                   src={unsplash(img, { w: 500 })}
@@ -560,14 +564,23 @@ export default function HomePage() {
               </a>
             ))}
           </div>
-          <div className="mt-6 flex items-center justify-center gap-4 text-xs text-stone">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-stone">
+            <a
+              href={contactInfo.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-bronze link-underline font-medium uppercase tracking-wider"
+            >
+              📸 Follow {contactInfo.instagramHandle} on Instagram
+            </a>
+            <span className="text-stone/40">·</span>
             <a
               href={contactInfo.googleShareUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-bronze link-underline font-medium uppercase tracking-wider"
             >
-              ⭐ View Google Reviews &amp; Photos for Vidhi&apos;s Salon
+              ⭐ View Google Reviews &amp; Photos
             </a>
           </div>
         </Container>

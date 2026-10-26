@@ -35,6 +35,8 @@ export const contactInfo = {
   whatsappNumber: "919925172388",
   whatsappHref: "https://wa.me/919925172388",
   email: "vidhisalon.bardoli@gmail.com",
+  instagramUrl: "https://www.instagram.com/vidhis_hair.skin.makeup/?hl=en",
+  instagramHandle: "@vidhis_hair.skin.makeup",
   googleShareUrl: "https://share.google/NFCkcM0IBWwtg1kay",
   googleKnowledgeGraphUrl:
     "https://www.google.com/search?kgmid=/g/1vyn2b0z&q=Vidhi%27s+Salon",
@@ -74,8 +76,8 @@ export const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
-    handle: "@vidhisalon.bardoli",
+    href: "https://www.instagram.com/vidhis_hair.skin.makeup/?hl=en",
+    handle: "@vidhis_hair.skin.makeup",
   },
 ] as const;
 
